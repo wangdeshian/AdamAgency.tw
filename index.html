@@ -1,131 +1,1316 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人首頁</title>
-    <style>
-        /* 1. 全局設定：讓網頁看起來更乾淨 */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 漂亮的漸層背景 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王得賢辦外勞 (聯捷人力) | 專業外籍看護媒合</title>
+  <meta name="description" content="王得賢辦外勞 (聯捷人力) - 專業媒合印尼外籍照服員、家庭看護、廠工人力。政府立案私業許字第2430號，用心服務，值得信賴。">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* 2. 卡片容器：白色的主要區塊 */
-        .profile-card {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 400px; /* 卡片最大寬度 */
-            padding: 40px;
-            border-radius: 20px; /* 圓角 */
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* 讓卡片浮起來的陰影 */
-            text-align: center;
-            transition: transform 0.3s ease; /* 動畫效果 */
-        }
-        .profile-card:hover {
-            transform: translateY(-5px); /* 滑鼠移上去時稍微浮起 */
-        }
+    :root {
+      /* 修改為稍微穩重的深藍色與溫暖的橘色搭配 */
+      --primary: hsl(217, 91%, 35%);
+      --primary-light: hsl(217, 91%, 45%);
+      --primary-dark: hsl(217, 91%, 25%);
+      --primary-foreground: hsl(210, 40%, 98%);
+      --accent: hsl(25, 95%, 53%);
+      --accent-light: hsl(25, 95%, 60%);
+      --accent-foreground: hsl(210, 40%, 98%);
+      --background: hsl(210, 20%, 98%);
+      --foreground: hsl(222, 47%, 11%);
+      --card: hsl(0, 0%, 100%);
+      --muted: hsl(210, 20%, 94%);
+      --muted-foreground: hsl(215, 16%, 47%);
+      --border: hsl(214, 32%, 91%);
+      --radius: 0.75rem;
+      --shadow-soft: 0 4px 20px -4px hsla(217, 91%, 35%, 0.15);
+      --shadow-card: 0 8px 30px -8px hsla(217, 91%, 35%, 0.12);
+      --shadow-float: 0 12px 40px -8px hsla(217, 91%, 35%, 0.2);
+      --line-green: #06C755;
+    }
 
-        /* 3. 圓形頭像圖片 */
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* 變成圓形 */
-            object-fit: cover;
-            border: 5px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* 4. 文字排版 */
-        h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .title {
-            color: #007bff; /* 藍色職稱 */
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        .description {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-size: 15px;
-        }
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* 5. 連結按鈕區域 */
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px; /* 按鈕之間的間距 */
-        }
-        .btn {
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 30px; /* 圓角按鈕 */
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        /* 主要按鈕樣式 */
-        .btn-primary {
-            background-color: #007bff;
-            color: white;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-        }
-        /* 次要按鈕樣式 */
-        .btn-outline {
-            background-color: transparent;
-            color: #333;
-            border-color: #ddd;
-        }
-        .btn-outline:hover {
-            background-color: #f8f9fa;
-            border-color: #333;
-        }
-    </style>
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: var(--accent-foreground);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-light);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-hero {
+      background-color: var(--accent);
+      color: var(--accent-foreground);
+      box-shadow: var(--shadow-float);
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+
+    .btn-hero:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-hero-outline {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--primary-foreground);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+      padding: 1rem 2rem;
+    }
+
+    .btn-hero-outline:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-foreground);
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .logo-text h1 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--foreground);
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+
+    .nav-desktop {
+      display: none;
+      gap: 2rem;
+    }
+
+    .nav-desktop a {
+      color: var(--foreground);
+      opacity: 0.8;
+      font-weight: 500;
+      transition: opacity 0.3s, color 0.3s;
+    }
+
+    .nav-desktop a:hover {
+      opacity: 1;
+      color: var(--primary);
+    }
+
+    .header-cta {
+      display: none;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--foreground);
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 0;
+      color: var(--foreground);
+      opacity: 0.8;
+      font-weight: 500;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .header-cta {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 80px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* 替換為更適合長者/家庭照護的溫馨圖片 */
+      background: url('https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=1920&q=80') center/cover no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, hsla(217, 91%, 35%, 0.9) 0%, hsla(217, 91%, 35%, 0.6) 50%, hsla(217, 91%, 35%, 0.4) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+      padding: 3rem 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 2rem;
+      color: var(--primary-foreground);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .hero-badge svg {
+      color: var(--accent);
+    }
+
+    .hero h2 {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      font-weight: 700;
+      color: var(--primary-foreground);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h2 span {
+      color: var(--accent);
+      font-size: 0.8em; /* 稍微縮小副標題 */
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-stat h3 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .hero-stat p {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 8rem;
+      background: linear-gradient(to top, var(--background), transparent);
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-header p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Services */
+    .services {
+      padding: 6rem 0;
+      background-color: var(--background);
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .service-card {
+      background-color: var(--card);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-float);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon.accent {
+      background-color: hsla(25, 95%, 53%, 0.1);
+      color: var(--accent);
+    }
+
+    .service-icon.primary {
+      background-color: hsla(217, 91%, 35%, 0.1);
+      color: var(--primary);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 0.25rem;
+    }
+
+    .service-card .subtitle {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+    }
+
+    .service-card > p {
+      color: var(--muted-foreground);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+      margin-bottom: 2rem;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+    }
+
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-icon.accent {
+      background-color: hsla(25, 95%, 53%, 0.1);
+      color: var(--accent);
+    }
+
+    .feature-icon.primary {
+      background-color: hsla(217, 91%, 35%, 0.1);
+      color: var(--primary);
+    }
+
+    .service-card .btn {
+      width: 100%;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 6rem 0;
+      background-color: var(--muted);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .testimonial-card {
+      background-color: var(--card);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-float);
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: -1rem;
+      left: 2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 0.75rem;
+      background-color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-foreground);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1.5rem;
+      padding-top: 1rem;
+      color: var(--accent);
+    }
+
+    .testimonial-content {
+      color: var(--foreground);
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .testimonial-author h4 {
+      font-weight: 600;
+      color: var(--foreground);
+    }
+
+    .testimonial-author p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    .testimonial-author span {
+      color: var(--accent);
+    }
+
+    /* FAQ */
+    .faq {
+      padding: 6rem 0;
+      background-color: var(--background);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background-color: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+
+    .faq-item.active {
+      box-shadow: var(--shadow-card);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--foreground);
+      font-family: inherit;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: var(--primary);
+    }
+
+    .faq-question svg {
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .footer-cta {
+      padding: 4rem 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-cta h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer-cta p {
+      font-size: 1.125rem;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+
+    .footer-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .footer-content {
+      padding: 3rem 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    .footer-company .logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer-company .logo-icon {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--accent);
+    }
+
+    .footer-company > p {
+      opacity: 0.8;
+      margin-bottom: 1rem;
+      max-width: 400px;
+    }
+
+    .footer-company .license {
+      font-size: 0.875rem;
+      opacity: 0.6;
+      background: rgba(0,0,0,0.2);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .footer h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact li,
+    .footer-hours li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact svg,
+    .footer-hours svg {
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+      color: var(--accent);
+    }
+
+    .footer-contact p:first-child {
+      font-weight: 500;
+    }
+
+    .footer-contact .sub,
+    .footer-hours .sub {
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    .footer-bottom {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    /* Floating Line Button */
+    .line-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: var(--line-green);
+      color: white;
+      padding: 1rem 1.25rem;
+      border-radius: 9999px;
+      box-shadow: var(--shadow-float);
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+
+    .line-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .line-btn-pulse {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background-color: var(--line-green);
+      animation: pulse 2s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.15); }
+    }
+
+    .line-btn span {
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .line-btn span {
+        display: inline;
+      }
+    }
+
+    /* Icons (SVG inline) */
+    .icon {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .icon-sm {
+      width: 20px;
+      height: 20px;
+    }
+
+    .icon-lg {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+  </style>
 </head>
 <body>
-    <div class="profile-card">
-        <img src="avatar.png" alt="個人頭像" class="avatar">
 
-        <h1>王得賢</h1>
-        
-        <p class="title">網頁設計新手 / 探索者</p>
-
-        <p class="description">
-            嗨！這是我用 GitHub Pages 建立的第一個漂亮網站。還在測試。
-        </p>
-
-        <div class="links">
-            <a href="https://www.facebook.com/wangdeshian" target="_blank" class="btn btn-primary">
-                追蹤我的 FACEBOOK
-            </a>
-            <a href="mailto:wangdeshian@livemail.tw" class="btn btn-outline">
-                寄信給我
-            </a>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-icon">王</div>
+        <div class="logo-text">
+          <h1>王得賢辦外勞</h1>
+          <p>聯捷人力 (私業許字第2430號)</p>
         </div>
+      </div>
+
+      <nav class="nav-desktop">
+        <a href="#home">首頁</a>
+        <a href="#services">服務項目</a>
+        <a href="#testimonials">客戶見證</a>
+        <a href="#faq">常見問題</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:0985296485" class="header-phone">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          0985-296-485
+        </a>
+        <a href="#contact" class="btn btn-primary">立即諮詢</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg id="menuIcon" class="icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg id="closeIcon" class="icon" viewBox="0 0 24 24" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
+    
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#home">首頁</a>
+      <a href="#services">服務項目</a>
+      <a href="#testimonials">客戶見證</a>
+      <a href="#faq">常見問題</a>
+      <a href="#contact">立即諮詢</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content animate-fade-in">
+      <div class="hero-badge">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        政府立案・合法經營
+      </div>
+
+      <h2>王得賢辦外勞 <span style="font-size: 0.6em; opacity: 0.9;">(聯捷人力)</span><br>專業媒合・用心服務</h2>
+      
+      <p class="hero-description">
+        專業經驗，為您的家庭與企業提供最合適的外籍人力資源。從家庭看護到工廠人力，我們確保每一次媒合都是最佳選擇。
+      </p>
+
+      <div class="hero-buttons">
+        <a href="tel:0985296485" class="btn btn-hero">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          免費諮詢
+        </a>
+        <a href="#services" class="btn btn-hero-outline">
+          了解服務
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3>20+</h3>
+          <p>年服務經驗</p>
+        </div>
+        <div class="hero-stat">
+          <h3>5000+</h3>
+          <p>成功媒合</p>
+        </div>
+        <div class="hero-stat">
+          <h3>98%</h3>
+          <p>客戶滿意度</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">OUR SERVICES</span>
+        <h2>服務項目</h2>
+        <p>我們提供全方位的人力仲介服務，無論是家庭看護或工廠人力，都能滿足您的需求</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon accent">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <h3>家庭看護</h3>
+          <p class="subtitle">Household Care</p>
+          <p>專業外籍看護，給您的家人最貼心的照顧</p>
+          
+          <ul class="service-features">
+            <li>
+              <div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              長者日常照護
+            </li>
+            <li>
+              <div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              24小時全天候服務
+            </li>
+            <li>
+              <div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              專業訓練認證
+            </li>
+            <li>
+              <div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              耐心細心陪伴
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-accent">了解更多</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon primary">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h3>廠工人力</h3>
+          <p class="subtitle">Industrial Labor</p>
+          <p>合法引進優質外籍勞工，助力企業生產效率</p>
+          
+          <ul class="service-features">
+            <li>
+              <div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              專業技術培訓
+            </li>
+            <li>
+              <div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              合法申請流程
+            </li>
+            <li>
+              <div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              製造業・營造業
+            </li>
+            <li>
+              <div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              完善法規保障
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">了解更多</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">TESTIMONIALS</span>
+        <h2>客戶見證</h2>
+        <p>聽聽我們的客戶怎麼說，他們的滿意是我們最大的驕傲</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M10 11h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h4v-3a1 1 0 0 0-1-1z"></path><path d="M22 11h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h4v-3a1 1 0 0 0-1-1z"></path></svg>
+          </div>
+          <div class="testimonial-stars">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-content">非常感謝王先生的專業服務！照顧我們家老人的阿蒂非常細心有耐心，讓我們全家都很放心。從申請到入境的過程，公司都全程協助，服務非常周到。</p>
+          <div class="testimonial-author">
+            <h4>林太太</h4>
+            <p>台北市 ・ <span>家庭看護</span></p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M10 11h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h4v-3a1 1 0 0 0-1-1z"></path><path d="M22 11h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h4v-3a1 1 0 0 0-1-1z"></path></svg>
+          </div>
+          <div class="testimonial-stars">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-content">與聯捷人力合作多年，引進的外籍勞工素質都很好，工作態度認真負責。公司在法規遵循方面也做得很完善，讓我們企業用人無後顧之憂。</p>
+          <div class="testimonial-author">
+            <h4>張總經理</h4>
+            <p>桃園工業區 ・ <span>製造業人力</span></p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M10 11h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h4v-3a1 1 0 0 0-1-1z"></path><path d="M22 11h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-3a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h4v-3a1 1 0 0 0-1-1z"></path></svg>
+          </div>
+          <div class="testimonial-stars">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-content">爸爸中風後需要專人照顧，王先生很快就幫我們找到合適的看護。他們的顧問很專業，會根據我們的需求推薦最適合的人選，真的很貼心！</p>
+          <div class="testimonial-author">
+            <h4>陳先生</h4>
+            <p>新竹縣 ・ <span>長照看護</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2>常見問題</h2>
+        <p>以下是客戶最常詢問的問題，如有其他疑問歡迎隨時與我們聯繫</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            申請外籍看護需要什麼條件？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              申請外籍家庭看護工需要符合以下條件之一：1. 被照顧者經醫療機構診斷巴氏量表評估為重度依賴；2. 被照顧者年滿80歲以上，經評估為輕度依賴；3. 被照顧者持有身心障礙證明。我們的專業顧問會協助您評估資格並準備相關文件。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            引進外籍勞工的流程需要多長時間？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              一般來說，家庭看護從申請到入境約需2-3個月，廠工人力約需3-4個月。流程包括：資格審查、向勞動部申請、國外選工面試、體檢及文件準備、入境許可申請、正式入境。實際時間會因案件複雜度及政府審核進度而有所不同。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            外籍勞工的薪資標準是多少？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              外籍勞工的薪資依據勞動部規定的基本工資標準，目前家庭看護工每月薪資約NT$20,000元起，加上雇主需負擔健保費、就業安定費等相關費用。廠工則依基本工資規定，另有加班費等計算。我們會在簽約前詳細說明所有費用明細。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            如果對外籍勞工不滿意可以更換嗎？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              可以的。若外籍勞工工作表現不佳或與雇主不合適，在符合法規的情況下可以申請轉換。我們提供完善的售後服務，會協助處理相關事宜。不過我們建議給予一定的適應期，並透過溝通解決問題，更換只是最後手段。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            你們的服務區域涵蓋哪些地方？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              我們的服務遍及全台灣，包括台北、新北、桃園、新竹、台中、台南、高雄等各縣市。無論您在哪個地區，我們都有專業顧問可以到府服務，為您提供最完善的人力媒合解決方案。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            貴公司是合法立案的仲介公司嗎？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              是的，本公司為政府立案之合法人力仲介機構，持有勞動部核發之私立就業服務機構許可證。我們嚴格遵守就業服務法及相關法規，所有流程均合法透明，讓您用人安心無虞。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="footer-cta">
+      <div class="container">
+        <h2>準備好開始了嗎？</h2>
+        <p>立即聯繫我們，讓專業顧問為您提供免費諮詢服務</p>
+        <div class="footer-cta-buttons">
+          <a href="tel:0985296485" class="btn btn-hero">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            免費諮詢專線
+          </a>
+          <a href="mailto:wangdeshian@livemail.tw" class="btn btn-hero-outline">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            發送郵件
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-company">
+          <div class="logo">
+            <div class="logo-icon">王</div>
+            <div class="logo-text">
+              <h1 style="color:white;">王得賢辦外勞</h1>
+              <p style="color:rgba(255,255,255,0.7);">聯捷人力 (私業許字第2430號)</p>
+            </div>
+          </div>
+          <p>二十年專業經驗，提供優質外籍人力服務。政府立案，合法經營，是您最值得信賴的人力仲介夥伴。</p>
+          <div class="license">私業許字第2430號</div>
+        </div>
+
+        <div class="footer-contact">
+          <h4>聯絡資訊</h4>
+          <ul>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <p>0985-296-485</p>
+                <p class="sub">免付費專線</p>
+              </div>
+            </li>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div>
+                <p>wangdeshian@livemail.tw</p>
+              </div>
+            </li>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                <p>桃園市桃園區建華二街23號</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-hours">
+          <h4>營業時間</h4>
+          <ul>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <p>週一至週五</p>
+                <p class="sub">09:00 - 18:00</p>
+              </div>
+            </li>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <p>週六</p>
+                <p class="sub">09:00 - 12:00</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 王得賢辦外勞 (聯捷人力). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="line-btn">
+    <div class="line-btn-pulse"></div>
+    <svg class="icon" viewBox="0 0 24 24" style="fill: white; stroke: none;"><path d="M22 10.6c0-5.3-5-9.6-11.1-9.6C4.8 1 0 5.3 0 10.6c0 4.8 3.8 8.8 9.1 9.5.4 0 .9.3.6 1l-1.3 3.6c-.1.3.1.5.4.3l5-3.3c.3-.2.6-.2 1 0 4.3 2.1 7.2-1.3 7.2-1.3 0 0 .1 0 0 0 .1 0 0-.1 0 0z"/></svg>
+    <span>Line 諮詢</span>
+  </a>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('active');
+      menuIcon.style.display = isOpen ? 'none' : 'block';
+      closeIcon.style.display = isOpen ? 'block' : 'none';
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+
+        // Toggle current item
+        item.classList.toggle('active', !isActive);
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
