@@ -308,4 +308,799 @@
 
     /* Hero Section */
     .hero {
-      position
+      position: relative;
+      min-height: 100vh; /* 確保佔滿螢幕 */
+      height: auto;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* ======================================================== */
+      /* [修改點] 這裡已經幫您改成 walkinpaark.png 了 */
+      /* 注意：如果圖片沒出來，請確認檔名大小寫完全一致 */
+      /* ======================================================== */
+      background: url('walkinpaark.png') center/cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, 
+        rgba(10, 36, 75, 0.95) 0%, 
+        rgba(10, 36, 75, 0.85) 50%, 
+        rgba(10, 36, 75, 0.4) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 2rem;
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 600px;
+    }
+
+    .hero-stat h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-stat p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Common Section */
+    section {
+      padding: 6rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Services */
+    .services {
+      background-color: var(--background);
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      background-color: var(--card);
+      border-radius: var(--radius);
+      padding: 3rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-float);
+      border-color: rgba(0,0,0,0);
+    }
+
+    .service-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .service-icon.accent { background: rgba(235, 94, 40, 0.1); color: var(--accent); }
+    .service-icon.primary { background: rgba(13, 59, 102, 0.1); color: var(--primary); }
+
+    .service-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-features {
+      margin: 2rem 0 auto;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      color: var(--foreground);
+    }
+
+    .feature-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .feature-icon.accent { background: var(--accent); color: white; }
+    .feature-icon.primary { background: var(--primary); color: white; }
+
+    /* Testimonials */
+    .testimonials {
+      background-color: #f8fafc;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .quote-icon {
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      opacity: 0.3;
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      display: flex;
+      gap: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-content {
+      font-size: 1.05rem;
+      color: var(--foreground);
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .testimonial-author h4 {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .testimonial-author p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    
+    .faq-item.active {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--foreground);
+      cursor: pointer;
+      text-align: left;
+    }
+    
+    .faq-question:hover {
+      color: var(--primary);
+    }
+
+    .faq-question svg {
+      transition: transform 0.3s;
+      color: var(--muted-foreground);
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background-color: #fafafa;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px; /* 足夠容納內容的高度 */
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-cta {
+      padding: 5rem 0;
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-content {
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+    }
+
+    .footer-company p {
+      opacity: 0.8;
+      margin: 1.5rem 0;
+    }
+
+    .license {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    .footer h4 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+    
+    .footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    .footer li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    /* Line Button */
+    .line-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: var(--line-green);
+      color: white;
+      padding: 0.875rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+
+    .line-btn:hover {
+      transform: scale(1.05) translateY(-2px);
+    }
+
+    /* Media Queries */
+    @media (min-width: 768px) {
+      .header-cta, .nav-desktop { display: flex; }
+      .mobile-menu-btn { display: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    
+    @media (min-width: 1024px) {
+      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Animation Utilities */
+    .animate-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-icon">Adam</div>
+        <div class="logo-text">
+          <h1>王得賢辦外勞</h1>
+          <p>聯捷人力 (私業許字第2430號)</p>
+        </div>
+      </div>
+
+      <nav class="nav-desktop">
+        <a href="#home">首頁</a>
+        <a href="#services">服務項目</a>
+        <a href="#testimonials">客戶見證</a>
+        <a href="#faq">常見問題</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:0985296485" class="header-phone">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          0985-296-485
+        </a>
+        <a href="#contact" class="btn btn-primary">免費諮詢</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="選單">
+        <svg id="menuIcon" class="icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg id="closeIcon" class="icon" viewBox="0 0 24 24" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">首頁</a>
+      <a href="#services">服務項目</a>
+      <a href="#testimonials">客戶見證</a>
+      <a href="#faq">常見問題</a>
+      <a href="#contact">立即諮詢</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content animate-in">
+      <div class="hero-badge">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" style="stroke: var(--accent);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        政府立案・安心首選
+      </div>
+
+      <h2>王得賢辦外勞<br><span style="color:var(--accent); font-size: 0.6em; display:block; margin-top:0.5rem;">專業媒合・視如己親</span></h2>
+      
+      <img src="walkinpaark.png" alt="公園散步" style="width: 100%; max-width: 600px; height: auto; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+
+      <p class="hero-description">
+        累積二十年專業經驗，為您嚴選最適合的外籍看護與廠工。從申請文件到入境安頓，我們提供一站式貼心服務，讓您無後顧之憂。
+      </p>
+
+      <div class="hero-buttons">
+        <a href="tel:0985296485" class="btn btn-hero">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          免費諮詢
+        </a>
+        <a href="#services" class="btn btn-hero-outline">了解服務</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3>20+</h3>
+          <p>年服務經驗</p>
+        </div>
+        <div class="hero-stat">
+          <h3>5k+</h3>
+          <p>成功媒合</p>
+        </div>
+        <div class="hero-stat">
+          <h3>98%</h3>
+          <p>客戶滿意度</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Services</span>
+        <h2>服務項目</h2>
+        <p>提供全方位的人力仲介服務，精準媒合您的需求</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon accent">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <h3>家庭看護</h3>
+          <p style="color:var(--muted-foreground); margin-bottom:1.5rem;">Household Care</p>
+          <p style="margin-bottom:2rem;">針對長者照護、失能照顧提供專業外籍看護，經過嚴格篩選與訓練，具備耐心與愛心。</p>
+          
+          <ul class="service-features">
+            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 長者日常起居照護</li>
+            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 24小時陪伴服務</li>
+            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 專業護理訓練認證</li>
+          </ul>
+          <div style="margin-top:auto; padding-top:2rem;">
+            <a href="#contact" class="btn btn-accent" style="width:100%">預約挑工</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon primary">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h3>廠工人力</h3>
+          <p style="color:var(--muted-foreground); margin-bottom:1.5rem;">Industrial Labor</p>
+          <p style="margin-bottom:2rem;">協助製造業、營造業引進優質外籍勞工，解決缺工問題，提升產能效率。</p>
+          
+          <ul class="service-features">
+            <li><div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 專業技術工與一般工</li>
+            <li><div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 合法快速申請流程</li>
+            <li><div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 完善宿舍管理輔導</li>
+          </ul>
+          <div style="margin-top:auto; padding-top:2rem;">
+            <a href="#contact" class="btn btn-primary" style="width:100%">企業諮詢</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Testimonials</span>
+        <h2>客戶見證</h2>
+        <p>來自雇主的真實回饋，見證我們的服務品質</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-content">"非常感謝王先生的專業服務！照顧我們家老人的阿蒂非常細心有耐心，讓我們全家都很放心。從申請到入境的過程，公司都全程協助，服務非常周到。"</p>
+          <div class="testimonial-author">
+            <h4>林太太</h4>
+            <p>台北市 / 家庭看護</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-content">"與聯捷人力合作多年，引進的外籍勞工素質都很好，工作態度認真負責。公司在法規遵循方面也做得很完善，讓我們企業用人無後顧之憂。"</p>
+          <div class="testimonial-author">
+            <h4>張總經理</h4>
+            <p>桃園工業區 / 製造業</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-content">"爸爸中風後需要專人照顧，王先生很快就幫我們找到合適的看護。他們的顧問很專業，會根據我們的需求推薦最適合的人選，真的很貼心！"</p>
+          <div class="testimonial-author">
+            <h4>陳先生</h4>
+            <p>新竹縣 / 長照看護</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2>常見問題</h2>
+        <p>解答您心中的疑問，讓申請流程更透明</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            申請外籍看護需要什麼條件？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              申請外籍家庭看護工需要符合以下條件之一：1. 被照顧者經醫療機構診斷巴氏量表評估為重度依賴；2. 被照顧者年滿80歲以上，經評估為輕度依賴；3. 被照顧者持有身心障礙證明。我們的專業顧問會協助您評估資格並準備相關文件。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            引進外籍勞工的流程需要多長時間？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              一般來說，家庭看護從申請到入境約需2-3個月，廠工人力約需3-4個月。流程包括：資格審查、向勞動部申請、國外選工面試、體檢及文件準備、入境許可申請、正式入境。
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            外籍勞工的薪資標準是多少？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              依據勞動部規定，目前家庭看護工每月薪資約NT$20,000元起（不含健保、就業安定費等）；廠工則依基本工資規定辦理。我們會在簽約前提供詳細的費用明細表。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            如果對外籍勞工不滿意可以更換嗎？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              可以。若勞工表現不佳或不適任，在符合法規前提下可申請轉換雇主或遣返，我們會協助安排後續事宜並遞補新的人力，確保您的權益。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="footer-cta">
+      <div class="container">
+        <h2>準備好開始了嗎？</h2>
+        <p style="margin-bottom:2rem; font-size:1.1rem; opacity:0.9;">現在就聯繫我們，讓專業顧問為您規劃最合適的人力方案</p>
+        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+          <a href="tel:0985296485" class="btn btn-hero">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            免費諮詢專線
+          </a>
+          <a href="mailto:wangdeshian@livemail.tw" class="btn btn-hero-outline">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            發送郵件
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-company">
+          <div class="logo">
+            <div class="logo-icon" style="background:white; color:var(--primary);">Adam</div>
+            <div class="logo-text">
+              <h1 style="color:white;">王得賢辦外勞</h1>
+              <p style="color:rgba(255,255,255,0.7);">聯捷人力 (私業許字第2430號)</p>
+            </div>
+          </div>
+          <p>二十年專業經驗，提供優質外籍人力服務。政府立案，合法經營，是您最值得信賴的人力仲介夥伴。</p>
+          <div class="license">私業許字第2430號</div>
+        </div>
+
+        <div class="footer-contact">
+          <h4>聯絡資訊</h4>
+          <ul>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>0985-296-485</span>
+            </li>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>wangdeshian@livemail.tw</span>
+            </li>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>桃園市桃園區建華二街23號</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-hours">
+          <h4>營業時間</h4>
+          <ul>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>週一至週五 09:00 - 18:00</span>
+            </li>
+            <li>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>週六 09:00 - 12:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 王得賢辦外勞 (聯捷人力). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://line.me/ti/p/YOUR_LINE_ID_HERE" target="_blank" class="line-btn">
+    <svg class="icon" viewBox="0 0 24 24" style="fill: white; stroke: none;"><path d="M22 10.6c0-5.3-5-9.6-11.1-9.6C4.8 1 0 5.3 0 10.6c0 4.8 3.8 8.8 9.1 9.5.4 0 .9.3.6 1l-1.3 3.6c-.1.3.1.5.4.3l5-3.3c.3-.2.6-.2 1 0 4.3 2.1 7.2-1.3 7.2-1.3 0 0 .1 0 0 0 .1 0 0-.1 0 0z"/></svg>
+    <span>Line 線上諮詢</span>
+  </a>
+
+  <script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const header = document.getElementById('header');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('active');
+      menuIcon.style.display = isOpen ? 'none' : 'block';
+      closeIcon.style.display = isOpen ? 'block' : 'none';
+    });
+
+    // Close menu when clicking link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close others
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+        
+        item.classList.toggle('active', !isActive);
+      });
+    });
+
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
