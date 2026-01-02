@@ -3,22 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個網站</title>
+    <title>我的個人首頁</title>
     <style>
-        body {
-            font-family: "Microsoft JhengHei", Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f0f2f5;
+        /* 1. 全局設定：讓網頁看起來更乾淨 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 漂亮的漸層背景 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 2. 卡片容器：白色的主要區塊 */
+        .profile-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px; /* 卡片最大寬度 */
+            padding: 40px;
+            border-radius: 20px; /* 圓角 */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* 讓卡片浮起來的陰影 */
+            text-align: center;
+            transition: transform 0.3s ease; /* 動畫效果 */
+        }
+        .profile-card:hover {
+            transform: translateY(-5px); /* 滑鼠移上去時稍微浮起 */
+        }
+
+        /* 3. 圓形頭像圖片 */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* 變成圓形 */
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* 4. 文字排版 */
         h1 {
-            color: #2c3e50;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: #007bff; /* 藍色職稱 */
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        /* 5. 連結按鈕區域 */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* 按鈕之間的間距 */
+        }
+        .btn {
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 30px; /* 圓角按鈕 */
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        /* 主要按鈕樣式 */
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+        /* 次要按鈕樣式 */
+        .btn-outline {
+            background-color: transparent;
+            color: #333;
+            border-color: #ddd;
+        }
+        .btn-outline:hover {
+            background-color: #f8f9fa;
+            border-color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>🎉 成功了！</h1>
-    <p>這是我的第一個 GitHub Pages 網頁。</p>
-    <p>原本是空白的，現在我有內容囉！</p>
+    <div class="profile-card">
+        <img src="https://cdn.pixabay.com/photo/2023/01/28/20/23/ai-generated-7751688_1280.jpg" alt="個人頭像" class="avatar">
+
+        <h1>王小明</h1>
+        
+        <p class="title">網頁設計新手 / 探索者</p>
+
+        <p class="description">
+            嗨！這是我用 GitHub Pages 建立的第一個漂亮網站。我正在學習 HTML 和 CSS，喜歡簡約現代的設計風格。
+        </p>
+
+        <div class="links">
+            <a href="https://github.com/wangdeshian" target="_blank" class="btn btn-primary">
+                追蹤我的 GitHub
+            </a>
+            <a href="mailto:yourname@example.com" class="btn btn-outline">
+                寄信給我
+            </a>
+        </div>
+    </div>
 </body>
 </html>
