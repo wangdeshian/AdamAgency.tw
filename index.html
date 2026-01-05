@@ -763,10 +763,11 @@
     flex-shrink: 0;
 ">
     <div style="
-        border: 3px solid white; /* 圓圈的線條也同步加粗到 3px */
+        /* ▼▼▼ 調整 1：外部圓圈線條加粗到 4px 以匹配內部 ▼▼▼ */
+        border: 4px solid white;
         border-radius: 50%;
         width: 38px;
-        height: 24px;
+        height: 24px; /* 圓圈高度維持 24px */
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -777,21 +778,21 @@
 
         <div style="
             width: 8px;
-            /* ▼▼▼ 關鍵修改：高度變短 (28px) ▼▼▼ */
-            height: 28px;
-            /* ▼▼▼ 關鍵修改：線條變粗 (4px) ▼▼▼ */
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
-            margin-bottom: 3px;
+            /* ▼▼▼ 調整 2：高度再縮短 (從 28px -> 26px)，只比圓圈高一點點 ▼▼▼ */
+            height: 26px;
+            /* ▼▼▼ 調整 3：L線條再加粗 (從 4px -> 5px) ▼▼▼ */
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
+            margin-bottom: 3px; /* 底部微調保持不變 */
         "></div>
 
         <div style="
             width: 8px;
-            /* ▼▼▼ 關鍵修改：高度變短 (28px) ▼▼▼ */
-            height: 28px;
-            /* ▼▼▼ 關鍵修改：線條變粗 (4px) ▼▼▼ */
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
+            /* ▼▼▼ 調整 2：高度再縮短 ▼▼▼ */
+            height: 26px;
+            /* ▼▼▼ 調整 3：L線條再加粗 ▼▼▼ */
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
             transform: scaleX(-1);
             margin-bottom: 3px;
         "></div>
@@ -1084,7 +1085,7 @@
       <div class="footer-grid">
         <div class="footer-company">
           <div class="logo">
-            <div class="logo-icon" style="
+           <div class="logo-icon" style="
     background: var(--primary);
     width: 44px;
     height: 44px;
@@ -1096,10 +1097,11 @@
     flex-shrink: 0;
 ">
     <div style="
-        border: 3px solid white; /* 圓圈的線條也同步加粗到 3px */
+        /* ▼▼▼ 調整 1：外部圓圈線條加粗到 4px 以匹配內部 ▼▼▼ */
+        border: 4px solid white;
         border-radius: 50%;
         width: 38px;
-        height: 24px;
+        height: 24px; /* 圓圈高度維持 24px */
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -1110,21 +1112,21 @@
 
         <div style="
             width: 8px;
-            /* ▼▼▼ 關鍵修改：高度變短 (28px) ▼▼▼ */
-            height: 28px;
-            /* ▼▼▼ 關鍵修改：線條變粗 (4px) ▼▼▼ */
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
-            margin-bottom: 3px;
+            /* ▼▼▼ 調整 2：高度再縮短 (從 28px -> 26px)，只比圓圈高一點點 ▼▼▼ */
+            height: 26px;
+            /* ▼▼▼ 調整 3：L線條再加粗 (從 4px -> 5px) ▼▼▼ */
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
+            margin-bottom: 3px; /* 底部微調保持不變 */
         "></div>
 
         <div style="
             width: 8px;
-            /* ▼▼▼ 關鍵修改：高度變短 (28px) ▼▼▼ */
-            height: 28px;
-            /* ▼▼▼ 關鍵修改：線條變粗 (4px) ▼▼▼ */
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
+            /* ▼▼▼ 調整 2：高度再縮短 ▼▼▼ */
+            height: 26px;
+            /* ▼▼▼ 調整 3：L線條再加粗 ▼▼▼ */
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
             transform: scaleX(-1);
             margin-bottom: 3px;
         "></div>
@@ -1233,6 +1235,7 @@
   </script>
 </body>
 </html>
+
 
 
 
