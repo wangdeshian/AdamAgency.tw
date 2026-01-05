@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>王得賢辦外勞 (聯捷人力) | 專業外籍看護媒合</title>
   <meta name="description" content="王得賢辦外勞 (聯捷人力) - 專業媒合印尼外籍照服員、家庭看護、廠工人力。政府立案私業許字第2430號，用心服務，值得信賴。">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
   
   <style>
     /* Reset & Base */
@@ -43,10 +43,11 @@
       
       --line-green: #06C755;
       --header-height: 80px;
-      
-      /* 印章專用色 */
-      --seal-red: #c41a1a; /* 硃砂紅 */
-      --seal-border: #e8d3d3; /* 印泥邊緣色 */
+
+      /* ▼▼▼ 日式質感配色定義 ▼▼▼ */
+      --japan-deep-indigo: #0f1742; /* 勝色 (Kachi-iro) - 極深的武士藍 */
+      /* 複雜的金色漸層，模擬金屬光澤 */
+      --japan-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     }
 
     html {
@@ -195,45 +196,62 @@
       gap: 0.75rem;
     }
 
-    /* Seal Logo Style - 印章樣式 */
-    .logo-seal-container {
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* 這裡保留原本的藍色背景框，如果您希望印章直接蓋在白色背景上，可以把下面這行註解掉 */
-        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    /* ▼▼▼ 全新日式嚴選 Icon 樣式 ▼▼▼ */
+    .logo-japan-container {
+        width: 48px; /* 稍微加大一點增加氣勢 */
+        height: 48px;
+        /* 深邃的日式靛藍背景 */
+        background-color: var(--japan-deep-indigo);
         border-radius: 12px;
-        box-shadow: var(--shadow-soft);
-    }
-
-    .seal-chop {
-        width: 36px;
-        height: 36px;
-        background-color: var(--seal-red);
-        border: 2px solid var(--seal-border);
-        border-radius: 4px; /* 稍微圓角，模擬磨損 */
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        padding: 2px;
-        box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3); /* 內陰影製造立體感 */
-        transform: rotate(-3deg); /* 稍微傾斜，像蓋上去的感覺 */
-    }
-
-    .seal-char {
-        font-family: 'Noto Sans TC', sans-serif;
-        font-weight: 900; /* 最粗體 */
-        color: var(--seal-border); /* 米白色文字 */
-        font-size: 14px;
-        line-height: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        /* 模擬印章邊緣的粗糙感 */
-        text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.3); 
+        position: relative;
+        box-shadow: var(--shadow-soft);
+        /* 加入一點點金色外發光 */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 1px rgba(179, 135, 40, 0.3);
+        overflow: hidden;
     }
+
+    /* 內部金色圓環 */
+    .logo-japan-container::before {
+        content: '';
+        position: absolute;
+        inset: 4px; /* 距離邊緣的距離 */
+        border-radius: 50%; /* 圓形 */
+        padding: 2px; /* 金色邊框的粗細 */
+        /* 製作金色漸層邊框的技巧 */
+        background: var(--japan-gold-grad); 
+        -webkit-mask: 
+           linear-gradient(#fff 0 0) content-box, 
+           linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        box-shadow: inset 0 0 4px rgba(0,0,0,0.4); /* 內部陰影增加立體感 */
+    }
+
+    .yanxuan-text {
+        /* 使用最粗的宋體/明體 */
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 1.1;
+        /* 直式排列 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2; /* 確保在圓環上方 */
+        
+        /* 黃金文字效果 */
+        background: var(--japan-gold-grad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* 文字微小陰影，模擬金屬浮雕感 */
+        filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.5));
+    }
+    /* ▲▲▲ 日式嚴選 Icon 樣式結束 ▲▲▲ */
+
 
     .logo-text h1 {
       font-size: 1.25rem;
@@ -777,12 +795,10 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <div class="logo">
-        <div class="logo-seal-container">
-            <div class="seal-chop">
-                <div class="seal-char">王</div>
-                <div class="seal-char">得</div>
-                <div class="seal-char">賢</div>
-                <div class="seal-char">印</div>
+        <div class="logo-japan-container">
+            <div class="yanxuan-text">
+                <span>嚴</span>
+                <span>選</span>
             </div>
         </div>
         <div class="logo-text">
@@ -1073,12 +1089,10 @@
       <div class="footer-grid">
         <div class="footer-company">
           <div class="logo">
-            <div class="logo-seal-container">
-                <div class="seal-chop">
-                    <div class="seal-char">王</div>
-                    <div class="seal-char">得</div>
-                    <div class="seal-char">賢</div>
-                    <div class="seal-char">印</div>
+            <div class="logo-japan-container">
+                <div class="yanxuan-text">
+                    <span>嚴</span>
+                    <span>選</span>
                 </div>
             </div>
             <div class="logo-text">
