@@ -203,6 +203,7 @@
       font-weight: bold;
       font-size: 1.25rem;
       box-shadow: var(--shadow-soft);
+      overflow: hidden; /* 確保 SVG 不會跑版 */
     }
 
     .logo-text h1 {
@@ -300,7 +301,7 @@
       font-weight: 500;
       border-bottom: 1px solid rgba(0,0,0,0.03);
     }
-    
+      
     .mobile-menu a:last-child {
       border-bottom: none;
       color: var(--primary);
@@ -506,7 +507,7 @@
       justify-content: center;
       flex-shrink: 0;
     }
-    
+      
     .feature-icon.accent { background: var(--accent); color: white; }
     .feature-icon.primary { background: var(--primary); color: white; }
 
@@ -553,7 +554,7 @@
       font-weight: 700;
       color: var(--primary);
     }
-    
+      
     .testimonial-author p {
       font-size: 0.875rem;
       color: var(--muted-foreground);
@@ -574,7 +575,7 @@
       border: 1px solid var(--border);
       overflow: hidden;
     }
-    
+      
     .faq-item.active {
       border-color: var(--primary);
       box-shadow: var(--shadow-soft);
@@ -594,7 +595,7 @@
       cursor: pointer;
       text-align: left;
     }
-    
+      
     .faq-question:hover {
       color: var(--primary);
     }
@@ -674,7 +675,7 @@
       position: relative;
       padding-bottom: 0.75rem;
     }
-    
+      
     .footer h4::after {
       content: '';
       position: absolute;
@@ -729,7 +730,7 @@
       .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
     }
-    
+      
     @media (min-width: 1024px) {
       .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
     }
@@ -740,7 +741,7 @@
       transform: translateY(20px);
       animation: fadeInUp 0.8s ease-out forwards;
     }
-    
+      
     @keyframes fadeInUp {
       to { opacity: 1; transform: translateY(0); }
     }
@@ -751,24 +752,16 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <div class="logo">
-       <div class="logo-icon"><svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-  <!-- 背景圓角方形 -->
-  <rect width="44" height="44" rx="12" fill="var(--primary)" />
-
-  <!-- 橢圓框 + 兩個 L -->
-  <g transform="translate(2,12) skewX(-10)">
-    <!-- 白色橢圓框 -->
-    <ellipse cx="20" cy="10" rx="20" ry="10" fill="none" stroke="white" stroke-width="4"/>
-
-    <!-- 左側 L -->
-    <path d="M8 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
-
-    <!-- 右側 L（鏡像） -->
-    <path d="M32 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
-  </g>
-</svg>
-    </div>
-</div>
+        <div class="logo-icon">
+          <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="12" fill="var(--primary)" />
+            <g transform="translate(2,12) skewX(-10)">
+              <ellipse cx="20" cy="10" rx="20" ry="10" fill="none" stroke="white" stroke-width="4"/>
+              <path d="M8 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
+              <path d="M32 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
+            </g>
+          </svg>
+        </div>
         <div class="logo-text">
           <h1>王得賢辦外勞</h1>
           <p>聯捷人力 (私業許字第2430號)</p>
@@ -894,7 +887,8 @@
       </div>
     </div>
   </section>
-<section id="training" style="background-color: white;">
+
+  <section id="training" style="background-color: white;">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Professional Training</span>
@@ -931,6 +925,7 @@
       </div>
     </div>
   </section>
+
   <section id="testimonials" class="testimonials">
     <div class="container">
       <div class="section-header">
@@ -1055,25 +1050,16 @@
       <div class="footer-grid">
         <div class="footer-company">
           <div class="logo">
-           <div class="logo-icon"><svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-  <!-- 背景圓角方形 -->
-  <rect width="44" height="44" rx="12" fill="var(--primary)" />
-
-  <!-- 橢圓框 + 兩個 L -->
-  <g transform="translate(2,12) skewX(-10)">
-    <!-- 白色橢圓框 -->
-    <ellipse cx="20" cy="10" rx="20" ry="10" fill="none" stroke="white" stroke-width="4"/>
-
-    <!-- 左側 L -->
-    <path d="M8 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
-
-    <!-- 右側 L（鏡像） -->
-    <path d="M32 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
-  </g>
-</svg>
-
-    </div>
-</div>
+            <div class="logo-icon">
+              <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="44" rx="12" fill="var(--primary)" />
+                <g transform="translate(2,12) skewX(-10)">
+                  <ellipse cx="20" cy="10" rx="20" ry="10" fill="none" stroke="white" stroke-width="4"/>
+                  <path d="M8 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
+                  <path d="M32 0 V22 H20" stroke="white" stroke-width="4" fill="none"/>
+                </g>
+              </svg>
+            </div>
             <div class="logo-text">
               <h1 style="color:white;">王得賢辦外勞</h1>
               <p style="color:rgba(255,255,255,0.7);">聯捷人力 (私業許字第2430號)</p>
@@ -1176,13 +1162,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
