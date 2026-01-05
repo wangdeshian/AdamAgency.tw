@@ -752,34 +752,46 @@
     <div class="container header-inner">
       <div class="logo">
         <div class="logo-icon" style="
-    background: var(--primary); /* 跟隨網站主色 */
+    background: var(--primary); /* 使用您原本的主色調 */
     width: 44px; 
     height: 44px; 
     border-radius: 12px; 
     display: flex; 
     align-items: center; 
     justify-content: center;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-soft); /* 使用您原本的陰影設定 */
+    flex-shrink: 0; /* 防止被擠壓 */
 ">
     <div style="
         border: 2px solid white; 
-        border-radius: 50%; 
-        width: 36px; 
-        height: 24px; 
+        border-radius: 50%; /* 橢圓形 */
+        width: 38px; 
+        height: 24px; /* 設定圓圈高度，比 L 矮，讓 L 可以穿出去 */
         display: flex; 
-        align-items: center; 
+        align-items: flex-end; /* 關鍵：讓 L 站在底部，頭部往上衝 */
         justify-content: center; 
-        transform: skewX(-10deg); /* 讓整體稍微傾斜，模仿原本 Logo 的速度感 */
+        gap: 4px; /* 兩個 L 之間的距離，稍微拉開一點更有氣勢 */
+        transform: skewX(-10deg); /* 速度感傾斜 */
+        overflow: visible; /* 關鍵：讓穿出去的 L 能夠顯示，不會被切掉 */
     ">
-        <span style="
-            color: white; 
-            font-family: sans-serif; 
-            font-weight: 900; 
-            font-size: 16px; 
-            line-height: 1; 
-            font-style: italic; /* 斜體文字 */
-            margin-right: 2px; /* 微調文字位置 */
-        ">LH</span>
+        
+        <div style="
+            width: 8px; 
+            height: 32px; /* 高度：比圓圈的 24px 高，創造穿刺感 */
+            border-left: 3px solid white; 
+            border-bottom: 3px solid white;
+            margin-bottom: 3px; /* 微調底部位置，讓它看起來是懸浮在圈圈中 */
+        "></div>
+
+        <div style="
+            width: 8px; 
+            height: 32px; /* 高度一致 */
+            border-left: 3px solid white; 
+            border-bottom: 3px solid white;
+            transform: scaleX(-1); /* 水平翻轉，形成面對面 */
+            margin-bottom: 3px;
+        "></div>
+
     </div>
 </div>
         <div class="logo-text">
@@ -1069,34 +1081,46 @@
         <div class="footer-company">
           <div class="logo">
             <div class="logo-icon" style="
-    background: var(--primary); /* 跟隨網站主色 */
+    background: var(--primary); /* 使用您原本的主色調 */
     width: 44px; 
     height: 44px; 
     border-radius: 12px; 
     display: flex; 
     align-items: center; 
     justify-content: center;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-soft); /* 使用您原本的陰影設定 */
+    flex-shrink: 0; /* 防止被擠壓 */
 ">
     <div style="
         border: 2px solid white; 
-        border-radius: 50%; 
-        width: 36px; 
-        height: 24px; 
+        border-radius: 50%; /* 橢圓形 */
+        width: 38px; 
+        height: 24px; /* 設定圓圈高度，比 L 矮，讓 L 可以穿出去 */
         display: flex; 
-        align-items: center; 
+        align-items: flex-end; /* 關鍵：讓 L 站在底部，頭部往上衝 */
         justify-content: center; 
-        transform: skewX(-10deg); /* 讓整體稍微傾斜，模仿原本 Logo 的速度感 */
+        gap: 4px; /* 兩個 L 之間的距離，稍微拉開一點更有氣勢 */
+        transform: skewX(-10deg); /* 速度感傾斜 */
+        overflow: visible; /* 關鍵：讓穿出去的 L 能夠顯示，不會被切掉 */
     ">
-        <span style="
-            color: white; 
-            font-family: sans-serif; 
-            font-weight: 900; 
-            font-size: 16px; 
-            line-height: 1; 
-            font-style: italic; /* 斜體文字 */
-            margin-right: 2px; /* 微調文字位置 */
-        ">LH</span>
+        
+        <div style="
+            width: 8px; 
+            height: 32px; /* 高度：比圓圈的 24px 高，創造穿刺感 */
+            border-left: 3px solid white; 
+            border-bottom: 3px solid white;
+            margin-bottom: 3px; /* 微調底部位置，讓它看起來是懸浮在圈圈中 */
+        "></div>
+
+        <div style="
+            width: 8px; 
+            height: 32px; /* 高度一致 */
+            border-left: 3px solid white; 
+            border-bottom: 3px solid white;
+            transform: scaleX(-1); /* 水平翻轉，形成面對面 */
+            margin-bottom: 3px;
+        "></div>
+
     </div>
 </div>
             <div class="logo-text">
@@ -1201,6 +1225,7 @@
   </script>
 </body>
 </html>
+
 
 
 
