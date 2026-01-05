@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>王得賢辦外勞 (聯捷人力) | 專業外籍看護媒合</title>
   <meta name="description" content="王得賢辦外勞 (聯捷人力) - 專業媒合印尼外籍照服員、家庭看護、廠工人力。政府立案私業許字第2430號，用心服務，值得信賴。">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   
   <style>
     /* Reset & Base */
@@ -43,6 +43,10 @@
       
       --line-green: #06C755;
       --header-height: 80px;
+      
+      /* 印章專用色 */
+      --seal-red: #c41a1a; /* 硃砂紅 */
+      --seal-border: #e8d3d3; /* 印泥邊緣色 */
     }
 
     html {
@@ -191,19 +195,44 @@
       gap: 0.75rem;
     }
 
-    .logo-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 1.25rem;
-      box-shadow: var(--shadow-soft);
-      overflow: hidden; /* 確保 SVG 不會跑版 */
+    /* Seal Logo Style - 印章樣式 */
+    .logo-seal-container {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 這裡保留原本的藍色背景框，如果您希望印章直接蓋在白色背景上，可以把下面這行註解掉 */
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+    }
+
+    .seal-chop {
+        width: 36px;
+        height: 36px;
+        background-color: var(--seal-red);
+        border: 2px solid var(--seal-border);
+        border-radius: 4px; /* 稍微圓角，模擬磨損 */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 2px;
+        box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3); /* 內陰影製造立體感 */
+        transform: rotate(-3deg); /* 稍微傾斜，像蓋上去的感覺 */
+    }
+
+    .seal-char {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 900; /* 最粗體 */
+        color: var(--seal-border); /* 米白色文字 */
+        font-size: 14px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 模擬印章邊緣的粗糙感 */
+        text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.3); 
     }
 
     .logo-text h1 {
@@ -748,15 +777,13 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <div class="logo">
-        <div class="logo-icon">
-          <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-            <rect width="44" height="44" rx="12" fill="var(--primary)" />
-            <g transform="translate(2,12) skewX(-10)">
-              <ellipse cx="20" cy="10" rx="20" ry="10" fill="none" stroke="white" stroke-width="4"/>
-              <path d="M8 -4 V18 H20" stroke="white" stroke-width="4" fill="none"/>
-              <path d="M32 -4 V18 H20" stroke="white" stroke-width="4" fill="none"/>
-            </g>
-          </svg>
+        <div class="logo-seal-container">
+            <div class="seal-chop">
+                <div class="seal-char">王</div>
+                <div class="seal-char">得</div>
+                <div class="seal-char">賢</div>
+                <div class="seal-char">印</div>
+            </div>
         </div>
         <div class="logo-text">
           <h1>王得賢辦外勞</h1>
@@ -1046,15 +1073,13 @@
       <div class="footer-grid">
         <div class="footer-company">
           <div class="logo">
-            <div class="logo-icon">
-              <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                <rect width="44" height="44" rx="12" fill="var(--primary)" />
-                <g transform="translate(2,12) skewX(-10)">
-                  <ellipse cx="20" cy="10" rx="20" ry="10" fill="none" stroke="white" stroke-width="4"/>
-                  <path d="M8 -4 V18 H20" stroke="white" stroke-width="4" fill="none"/>
-                  <path d="M32 -4 V18 H20" stroke="white" stroke-width="4" fill="none"/>
-                </g>
-              </svg>
+            <div class="logo-seal-container">
+                <div class="seal-chop">
+                    <div class="seal-char">王</div>
+                    <div class="seal-char">得</div>
+                    <div class="seal-char">賢</div>
+                    <div class="seal-char">印</div>
+                </div>
             </div>
             <div class="logo-text">
               <h1 style="color:white;">王得賢辦外勞</h1>
