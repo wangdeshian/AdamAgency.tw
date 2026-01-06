@@ -20,6 +20,7 @@
     }
 
     :root {
+      /* 配色系統 */
       --primary: hsl(215, 90%, 32%);
       --primary-light: hsl(215, 90%, 42%);
       --primary-dark: hsl(215, 90%, 22%);
@@ -45,6 +46,7 @@
       --line-green: #06C755;
       --header-height: 80px;
 
+      /* 日式質感配色 */
       --japan-deep-indigo: #0f1742;
       --japan-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     }
@@ -194,7 +196,7 @@
       gap: 0.75rem;
     }
 
-    /* 日式嚴選 Icon */
+    /* Logo Styles */
     .logo-japan-container {
         width: 48px;
         height: 48px;
@@ -538,7 +540,7 @@
     .feature-icon.accent { background: var(--accent); color: white; }
     .feature-icon.primary { background: var(--primary); color: white; }
 
-    /* Testimonials Image Gallery Style */
+    /* Testimonials (Reverted to Card Style) */
     .testimonials {
       background-color: #f8fafc;
     }
@@ -549,34 +551,68 @@
       grid-template-columns: 1fr;
     }
 
-    .testimonial-image-card {
+    .testimonial-card {
       background-color: white;
       border-radius: var(--radius);
-      padding: 1rem; /* 照片相框感 */
+      padding: 2.5rem;
       box-shadow: var(--shadow-soft);
+      position: relative;
       transition: transform 0.3s ease;
-      text-align: center;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-card);
     }
 
-    .testimonial-image-card:hover {
-      transform: scale(1.02); /* 滑鼠移過去稍微放大 */
-      box-shadow: var(--shadow-float);
+    .quote-icon {
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      opacity: 0.3;
     }
 
-    .testimonial-image-card img {
-      width: 100%;
-      height: 300px; /* 固定高度讓排版整齊，或者設 auto */
-      object-fit: cover; /* 保持圖片比例並填滿 */
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      border: 1px solid #eee;
+    .testimonial-stars {
+      color: #fbbf24;
+      display: flex;
+      gap: 2px;
+      margin-bottom: 1.5rem;
     }
 
-    .testimonial-caption {
+    .testimonial-content {
+      font-size: 1.05rem;
+      color: var(--foreground);
+      margin-bottom: 2rem;
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    .testimonial-footer {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #f0f4f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+    }
+
+    .testimonial-author h4 {
       font-weight: 700;
       color: var(--primary);
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+      
+    .testimonial-author p {
+      font-size: 0.8rem;
+      color: var(--muted-foreground);
     }
 
     /* FAQ */
@@ -746,7 +782,7 @@
       .header-cta, .nav-desktop { display: flex; }
       .mobile-menu-btn { display: none; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: repeat(3, 1fr); } /* 改為3欄顯示圖片 */
+      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
     }
 
@@ -942,23 +978,53 @@
       <div class="section-header">
         <span class="section-label">Real Feedback</span>
         <h2>真實好評見證</h2>
-        <p>雇主與移工的真實互動，是我們服務品質的最佳證明</p>
+        <p>來自雇主的真實心聲，見證我們的用心服務</p>
       </div>
 
       <div class="testimonials-grid">
-        <div class="testimonial-image-card">
-          <img src="review-line.jpg" alt="客戶LINE對話截圖-稱讚服務很好">
-          <div class="testimonial-caption">服務細心，照顧周到</div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-content">"真的非常感謝王先生的團隊。之前很擔心移工來了不會顧，結果阿蒂到職後把媽媽照顧得無微不至，服務真的很好，讓我們全家都很放心！"</p>
+          <div class="testimonial-footer">
+              <div class="testimonial-avatar">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <div class="testimonial-author">
+                <h4>林太太</h4>
+                <p>台北市 / 家庭看護</p>
+              </div>
+          </div>
         </div>
 
-        <div class="testimonial-image-card">
-          <img src="review-letter-1.jpg" alt="客戶手寫感謝信-終於找到好幫手">
-          <div class="testimonial-caption">嚴選把關，終於找到好幫手</div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-content">"之前換了好幾個外勞都不合適，讓人很頭痛。還好找到聯捷人力，幫我們媒合到現在這位阿妮，做事勤快又主動，幫了我們家很大的忙。"</p>
+          <div class="testimonial-footer">
+              <div class="testimonial-avatar">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="testimonial-author">
+                <h4>陳先生</h4>
+                <p>新北市 / 家庭看護</p>
+              </div>
+          </div>
         </div>
 
-        <div class="testimonial-image-card">
-          <img src="review-letter-2.jpg" alt="客戶手寫感謝信-相處融洽">
-          <div class="testimonial-caption">視如己出，溫馨相處</div>
+        <div class="testimonial-card">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-content">"我們家阿公脾氣比較拗，原本怕處不來。沒想到新的看護很有耐心，現在阿公跟她相處得很好，每天都有說有笑，也願意配合復健，真的很感謝！"</p>
+          <div class="testimonial-footer">
+              <div class="testimonial-avatar">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <div class="testimonial-author">
+                <h4>王小姐</h4>
+                <p>台北市 / 長照看護</p>
+              </div>
+          </div>
         </div>
       </div>
     </div>
