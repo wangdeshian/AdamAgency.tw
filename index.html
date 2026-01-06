@@ -20,13 +20,12 @@
     }
 
     :root {
-      /* 優化配色：更專業的深藍與更有活力的橙色 */
-      --primary: hsl(215, 90%, 32%); /* 更沈穩的藍 */
+      --primary: hsl(215, 90%, 32%);
       --primary-light: hsl(215, 90%, 42%);
       --primary-dark: hsl(215, 90%, 22%);
       --primary-foreground: #ffffff;
       
-      --accent: hsl(28, 90%, 55%); /* 更溫暖的橙 */
+      --accent: hsl(28, 90%, 55%);
       --accent-light: hsl(28, 90%, 65%);
       --accent-foreground: #ffffff;
       
@@ -39,7 +38,6 @@
       --border: hsl(214, 20%, 90%);
       
       --radius: 1rem;
-      /* 更現代的柔和陰影 */
       --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
       --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
       --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -47,15 +45,12 @@
       --line-green: #06C755;
       --header-height: 80px;
 
-      /* ▼▼▼ 日式質感配色定義 ▼▼▼ */
-      --japan-deep-indigo: #0f1742; /* 勝色 (Kachi-iro) - 極深的武士藍 */
-      /* 複雜的金色漸層，模擬金屬光澤 */
+      --japan-deep-indigo: #0f1742;
       --japan-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     }
 
     html {
       scroll-behavior: smooth;
-      /* 關鍵修改：防止固定 header 遮擋錨點內容 */
       scroll-padding-top: calc(var(--header-height) + 2rem);
     }
 
@@ -63,7 +58,7 @@
       font-family: 'Noto Sans TC', sans-serif;
       background-color: var(--background);
       color: var(--foreground);
-      line-height: 1.7; /* 增加行距提升易讀性 */
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -109,7 +104,7 @@
       justify-content: center;
       gap: 0.5rem;
       padding: 0.75rem 1.5rem;
-      border-radius: 50px; /* 藥丸形按鈕更現代 */
+      border-radius: 50px;
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
@@ -199,7 +194,7 @@
       gap: 0.75rem;
     }
 
-    /* ▼▼▼ 日式嚴選 Icon 樣式 ▼▼▼ */
+    /* 日式嚴選 Icon */
     .logo-japan-container {
         width: 48px;
         height: 48px;
@@ -209,7 +204,6 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        box-shadow: var(--shadow-soft);
         box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 1px rgba(179, 135, 40, 0.3);
         overflow: hidden;
     }
@@ -221,9 +215,7 @@
         border-radius: 50%;
         padding: 2px;
         background: var(--japan-gold-grad); 
-        -webkit-mask: 
-           linear-gradient(#fff 0 0) content-box, 
-           linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
         box-shadow: inset 0 0 4px rgba(0,0,0,0.4);
@@ -244,8 +236,6 @@
         -webkit-text-fill-color: transparent;
         filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.5));
     }
-    /* ▲▲▲ 日式嚴選 Icon 樣式結束 ▲▲▲ */
-
 
     .logo-text h1 {
       font-size: 1.25rem;
@@ -352,7 +342,7 @@
     /* Hero Section */
     .hero {
       position: relative;
-      min-height: 100vh; /* 確保佔滿螢幕 */
+      min-height: 100vh;
       height: auto;
       display: flex;
       align-items: center;
@@ -548,7 +538,7 @@
     .feature-icon.accent { background: var(--accent); color: white; }
     .feature-icon.primary { background: var(--primary); color: white; }
 
-    /* Testimonials */
+    /* Testimonials Image Gallery Style */
     .testimonials {
       background-color: #f8fafc;
     }
@@ -559,42 +549,34 @@
       grid-template-columns: 1fr;
     }
 
-    .testimonial-card {
+    .testimonial-image-card {
       background-color: white;
       border-radius: var(--radius);
-      padding: 2.5rem;
+      padding: 1rem; /* 照片相框感 */
       box-shadow: var(--shadow-soft);
-      position: relative;
+      transition: transform 0.3s ease;
+      text-align: center;
     }
 
-    .quote-icon {
-      margin-bottom: 1.5rem;
-      color: var(--accent);
-      opacity: 0.3;
+    .testimonial-image-card:hover {
+      transform: scale(1.02); /* 滑鼠移過去稍微放大 */
+      box-shadow: var(--shadow-float);
     }
 
-    .testimonial-stars {
-      color: #fbbf24;
-      display: flex;
-      gap: 2px;
-      margin-bottom: 1.5rem;
+    .testimonial-image-card img {
+      width: 100%;
+      height: 300px; /* 固定高度讓排版整齊，或者設 auto */
+      object-fit: cover; /* 保持圖片比例並填滿 */
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid #eee;
     }
 
-    .testimonial-content {
-      font-size: 1.05rem;
-      color: var(--foreground);
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .testimonial-author h4 {
+    .testimonial-caption {
       font-weight: 700;
       color: var(--primary);
-    }
-      
-    .testimonial-author p {
-      font-size: 0.875rem;
-      color: var(--muted-foreground);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
     }
 
     /* FAQ */
@@ -655,7 +637,7 @@
     }
 
     .faq-item.active .faq-answer {
-      max-height: 300px; /* 足夠容納內容的高度 */
+      max-height: 300px;
     }
 
     .faq-answer-inner {
@@ -764,12 +746,8 @@
       .header-cta, .nav-desktop { display: flex; }
       .mobile-menu-btn { display: none; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(3, 1fr); } /* 改為3欄顯示圖片 */
       .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
-    }
-      
-    @media (min-width: 1024px) {
-      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     /* Animation Utilities */
@@ -962,40 +940,25 @@
   <section id="testimonials" class="testimonials">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Testimonials</span>
-        <h2>客戶見證</h2>
-        <p>來自雇主的真實回饋，見證我們的服務品質</p>
+        <span class="section-label">Real Feedback</span>
+        <h2>真實好評見證</h2>
+        <p>雇主與移工的真實互動，是我們服務品質的最佳證明</p>
       </div>
 
       <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-content">"非常感謝王先生的專業服務！照顧我們家老人的阿蒂非常細心有耐心，讓我們全家都很放心。從申請到入境的過程，公司都全程協助，服務非常周到。"</p>
-          <div class="testimonial-author">
-            <h4>林太太</h4>
-            <p>台北市 / 家庭看護</p>
-          </div>
+        <div class="testimonial-image-card">
+          <img src="review-line.jpg" alt="客戶LINE對話截圖-稱讚服務很好">
+          <div class="testimonial-caption">服務細心，照顧周到</div>
         </div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-content">"與聯捷人力合作多年，引進的外籍勞工素質都很好，工作態度認真負責。公司在法規遵循方面也做得很完善，讓我們企業用人無後顧之憂。"</p>
-          <div class="testimonial-author">
-            <h4>張總經理</h4>
-            <p>桃園工業區 / 製造業</p>
-          </div>
+        <div class="testimonial-image-card">
+          <img src="review-letter-1.jpg" alt="客戶手寫感謝信-終於找到好幫手">
+          <div class="testimonial-caption">嚴選把關，終於找到好幫手</div>
         </div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-content">"爸爸中風後需要專人照顧，王先生很快就幫我們找到合適的看護。他們的顧問很專業，會根據我們的需求推薦最適合的人選，真的很貼心！"</p>
-          <div class="testimonial-author">
-            <h4>陳先生</h4>
-            <p>新竹縣 / 長照看護</p>
-          </div>
+        <div class="testimonial-image-card">
+          <img src="review-letter-2.jpg" alt="客戶手寫感謝信-相處融洽">
+          <div class="testimonial-caption">視如己出，溫馨相處</div>
         </div>
       </div>
     </div>
