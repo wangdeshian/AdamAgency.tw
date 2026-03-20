@@ -768,6 +768,7 @@
     .faq-answer-inner {
       padding: 0 1.5rem 1.5rem;
       color: var(--muted-foreground);
+      line-height: 1.8;
     }
 
     /* Footer */
@@ -1092,7 +1093,8 @@
             <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             申請資格懶人包
           </div>
-          <p style="margin-bottom:1rem; color:var(--muted-foreground);">符合以下任一條件，即可申請家庭外籍看護：</p>
+          
+          <h4 style="color:var(--japan-deep-indigo); margin-top:0.5rem; margin-bottom:0.8rem; font-size:1.1rem; border-bottom:2px solid var(--border); padding-bottom:0.5rem;">🏥 家庭外籍看護 (照顧長照/病患)</h4>
           <ul class="guide-list">
             <li>
               <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1104,19 +1106,27 @@
             </li>
             <li>
               <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>身心障礙：</strong>領有重度以上特定身心障礙手冊 (如肢體障礙、呼吸功能等)。</span>
+              <span><strong>身心障礙：</strong>領有重度以上特定身心障礙手冊。</span>
             </li>
             <li>
               <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>長照使用者：</strong>使用居家照顧或日間照顧服務持續達 6 個月以上。</span>
+              <span><strong>長照使用者：</strong>使用居家/日間照顧服務持續達 6 個月以上。</span>
             </li>
             <li>
               <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>失智症：</strong>經醫師診斷 CDR 量表 1 分以上者。</span>
+              <span><strong>一般評估：</strong>未滿 80 歲，經醫院巴氏量表評估有全日照護需求。</span>
+            </li>
+          </ul>
+
+          <h4 style="color:var(--accent); margin-top:1.5rem; margin-bottom:0.8rem; font-size:1.1rem; border-bottom:2px solid var(--border); padding-bottom:0.5rem;">🏠 家庭外籍幫傭 (2026/4/13 新制上路🔥)</h4>
+          <ul class="guide-list">
+            <li>
+              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24" style="color:var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>一般家庭：</strong>家有 <strong>1名未滿12歲兒童</strong> 即可申請。</span>
             </li>
             <li>
-              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>一般評估：</strong>未滿 80 歲，經醫院巴氏量表評估有全日照護需求 (35分以下)。</span>
+              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24" style="color:var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>特殊家庭優先：</strong>家有2名(含1名未滿6歲)或3名未滿12歲兒童、單親/身障家長育有1名未滿12歲兒童，或孩童具罕病/遲緩等狀況，享優先審核與規費減免。</span>
             </li>
           </ul>
         </div>
@@ -1165,6 +1175,11 @@
               <li><strong>登記費及介紹費：</strong>依規定不超過外勞第一個月薪資 (上限 $20,000 元/次)。</li>
               <li><strong>仲介服務費：</strong>依規定每年不超過 $2,000 元。</li>
             </ul>
+            
+            <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(235, 94, 40, 0.05); border-radius: 8px; border-left: 4px solid var(--accent); font-size: 0.85rem; color: var(--foreground); line-height: 1.6;">
+              <strong>📢 2026幫傭新制規費提醒：</strong><br>
+              申請「外籍家庭幫傭」，一般家庭之就業安定費為每月 <strong>$5,000</strong>；若符合特殊需求家庭條件，則減免為每月 <strong>$2,000</strong>。
+            </div>
           </div>
         </div>
       </div>
@@ -1364,18 +1379,6 @@
           <div class="faq-answer">
             <div class="faq-answer-inner">
               目前家庭類移工在台工作年限累計最長為 <strong>12年</strong>（若符合特定條件可延長至14年）。合約一簽通常為 <strong>3年</strong>，法規無硬性規定最短聘僱期，但若未滿期解約需依流程辦理。建議長期聘僱，照護關係才穩固。
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            移工轉出期間，雇主會有其他衍生費用嗎？
-            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              要注意喔！在移工<strong>「確定轉出」</strong>（由新雇主承接或出國）之前，這段過渡期間的 <strong>健保費</strong> 與 <strong>就業安定費</strong>，依規定仍須由原雇主負擔。我們會盡力縮短轉出空窗期，減少您的負擔。
             </div>
           </div>
         </div>
