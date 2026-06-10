@@ -4,870 +4,586 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="2YDuPMCJ7QIVE-QbhiwvS0CbbCGR29bcl1vj5Flol9M" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>得賢引才 (聯捷人力) ｜ 專業媒合外籍移工</title>
-  
+
   <meta name="description" content="得賢引才 (聯捷人力) - 專業媒合外籍移工、印尼照服員、家庭看護、幫傭、機構看護、廠工人力。提供2026最新申請資格與費用明細。政府立案私業許字第2430號，用心服務，值得信賴。">
-  
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23bf953f'/%3E%3Cstop offset='50%25' stop-color='%23b38728'/%3E%3Cstop offset='100%25' stop-color='%23aa771c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%230f1742'/%3E%3Ccircle cx='32' cy='32' r='28' stroke='url(%23g)' stroke-width='3' fill='none'/%3E%3Ctext x='32' y='26' font-family='serif' font-weight='900' font-size='24' fill='url(%23g)' text-anchor='middle' dominant-baseline='middle'%3E嚴%3C/text%3E%3Ctext x='32' y='50' font-family='serif' font-weight='900' font-size='24' fill='url(%23g)' text-anchor='middle' dominant-baseline='middle'%3E選%3C/text%3E%3C/svg%3E">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset & Base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* ============ Reset & Base ============ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* 配色系統 */
-      --primary: hsl(215, 90%, 32%);
-      --primary-light: hsl(215, 90%, 42%);
-      --primary-dark: hsl(215, 90%, 22%);
-      --primary-foreground: #ffffff;
-      
-      --accent: hsl(28, 90%, 55%);
-      --accent-light: hsl(28, 90%, 65%);
-      --accent-foreground: #ffffff;
-      
-      --background: hsl(210, 20%, 99%);
-      --foreground: hsl(215, 30%, 15%);
-      
-      --card: #ffffff;
-      --muted: hsl(210, 20%, 96%);
-      --muted-foreground: hsl(215, 15%, 50%);
-      --border: hsl(214, 20%, 90%);
-      
-      --radius: 1rem;
-      --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-      --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-      --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      
-      --line-green: #06C755;
+      /* 日式奢華金 配色系統 */
+      --indigo:        #0f1742;
+      --indigo-light:  #1b2658;
+      --indigo-deep:   #090e2e;
+      --gold:          #b38728;
+      --gold-bright:   #d4af5a;
+      --gold-pale:     #e9d9ad;
+      --gold-grad:     linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+      --gold-grad-soft:linear-gradient(135deg, #c9a14d, #e8d290, #b38728);
+
+      --paper:         #faf8f2;   /* 和紙底色 */
+      --card:          #fffdf8;
+      --ink:           #1c2333;
+      --ink-soft:      #5c6275;
+      --hairline:      #e7e0cd;
+
+      --line-green:    #06C755;
+      --radius:        14px;
       --header-height: 80px;
 
-      /* 日式質感配色 */
-      --japan-deep-indigo: #0f1742;
-      --japan-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+      --shadow-soft:  0 2px 10px rgba(15, 23, 66, 0.06);
+      --shadow-card:  0 14px 34px -12px rgba(15, 23, 66, 0.16);
+      --shadow-float: 0 24px 50px -14px rgba(15, 23, 66, 0.30);
+      --shadow-gold:  0 8px 24px -8px rgba(179, 135, 40, 0.45);
     }
 
-    /* 書法字體樣式 */
-    .calligraphy-text {
-        font-family: "KaiTi", "STKaiti", "標楷體", serif;
-        font-weight: 900;
-        letter-spacing: 0.05em;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: calc(var(--header-height) + 2rem);
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 1.5rem); }
 
     body {
       font-family: 'Noto Sans TC', sans-serif;
-      background-color: var(--background);
-      color: var(--foreground);
-      line-height: 1.7;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.85;
       -webkit-font-smoothing: antialiased;
+      font-weight: 400;
+      letter-spacing: 0.015em;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: color 0.2s ease;
-    }
+    a { text-decoration: none; color: inherit; transition: color .25s ease; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; display: block; }
 
-    ul {
-      list-style: none;
-    }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+    .serif, h1, h2, h3, h4 { font-family: 'Noto Serif TC', serif; }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+    /* 鎏金文字 */
+    .gold-text {
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
     }
 
     /* Icons */
-    .icon {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-    .icon-sm { width: 20px; height: 20px; }
-    .icon-lg { width: 40px; height: 40px; }
+    .icon { width: 24px; height: 24px; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    .icon-sm { width: 19px; height: 19px; }
+    .icon-lg { width: 38px; height: 38px; }
 
-    /* Buttons */
+    /* ============ Buttons ============ */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      padding: .8rem 1.7rem; border-radius: 4px;
+      font-weight: 500; font-size: .98rem; letter-spacing: .08em;
+      cursor: pointer; border: none;
+      transition: all .35s cubic-bezier(.22,.61,.36,1);
     }
+    .btn:active { transform: scale(.98); }
 
-    .btn:active {
-      transform: scale(0.98);
+    .btn-gold {
+      background: linear-gradient(135deg, #c9a14d 0%, #b38728 55%, #9c711c 100%);
+      color: #fffdf4; box-shadow: var(--shadow-gold);
+      position: relative; overflow: hidden;
     }
+    .btn-gold::after {
+      content: ''; position: absolute; top: 0; left: -80%;
+      width: 50%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: skewX(-20deg); transition: left .6s ease;
+    }
+    .btn-gold:hover::after { left: 130%; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 32px -8px rgba(179,135,40,.55); }
 
-    .btn-primary {
-      background-color: var(--primary);
-      color: var(--primary-foreground);
-      box-shadow: var(--shadow-soft);
+    .btn-indigo {
+      background: var(--indigo); color: #f5f1e6;
+      border: 1px solid rgba(212,175,90,.35);
     }
-    .btn-primary:hover {
-      background-color: var(--primary-light);
-      box-shadow: var(--shadow-card);
-      transform: translateY(-2px);
-    }
+    .btn-indigo:hover { background: var(--indigo-light); transform: translateY(-2px); box-shadow: var(--shadow-card); }
 
-    .btn-accent {
-      background-color: var(--accent);
-      color: var(--accent-foreground);
-      box-shadow: var(--shadow-soft);
+    .btn-outline-gold {
+      background: transparent; color: var(--gold-pale);
+      border: 1px solid rgba(212,175,90,.7);
     }
-    .btn-accent:hover {
-      background-color: var(--accent-light);
-      box-shadow: var(--shadow-card);
-      transform: translateY(-2px);
-    }
+    .btn-outline-gold:hover { background: rgba(212,175,90,.12); color: #fff; border-color: var(--gold-bright); transform: translateY(-2px); }
 
-    /* LINE 按鈕樣式 */
-    .btn-line {
-      background-color: var(--line-green);
-      color: white;
-      box-shadow: var(--shadow-soft);
-    }
-    .btn-line:hover {
-      background-color: #05a546;
-      box-shadow: var(--shadow-card);
-      transform: translateY(-2px);
-    }
+    .btn-line { background-color: var(--line-green); color: #fff; box-shadow: 0 6px 18px -6px rgba(6,199,85,.5); }
+    .btn-line:hover { background-color: #05a546; transform: translateY(-2px); }
 
-    .btn-hero {
-      background-color: var(--accent);
-      color: var(--accent-foreground);
-      box-shadow: var(--shadow-float);
-      font-size: 1.125rem;
-      padding: 1rem 2.5rem;
-    }
-    .btn-hero:hover {
-      background-color: var(--accent-light);
-      transform: translateY(-4px);
-    }
+    .btn-hero { font-size: 1.06rem; padding: 1rem 2.6rem; }
 
-    .btn-hero-outline {
-      background-color: transparent;
-      color: #ffffff;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      padding: 1rem 2.5rem;
-      font-size: 1.125rem;
-    }
-    .btn-hero-outline:hover {
-      background-color: #ffffff;
-      color: var(--primary);
-      border-color: #ffffff;
-    }
-
-    /* Header */
+    /* ============ Header ============ */
     .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(11, 17, 50, 0.82);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212,175,90,.18);
+      transition: all .35s ease;
     }
-
-    .header.scrolled {
-      box-shadow: var(--shadow-soft);
-      background-color: rgba(255, 255, 255, 0.98);
-    }
+    .header.scrolled { background: rgba(9, 14, 46, 0.96); box-shadow: 0 8px 30px -10px rgba(0,0,0,.45); }
 
     .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: var(--header-height);
-      max-width: 1400px; 
-      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: var(--header-height); max-width: 1400px; padding: 0 2rem;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-shrink: 0; 
-    }
+    .logo { display: flex; align-items: center; gap: .8rem; flex-shrink: 0; }
 
-    /* Logo Styles */
     .logo-japan-container {
-        width: 48px;
-        height: 48px;
-        background-color: var(--japan-deep-indigo);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 1px rgba(179, 135, 40, 0.3);
-        overflow: hidden;
+      width: 48px; height: 48px; background-color: var(--indigo-deep);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,.35), 0 0 0 1px rgba(179,135,40,.45);
     }
-
     .logo-japan-container::before {
-        content: '';
-        position: absolute;
-        inset: 4px;
-        border-radius: 50%;
-        padding: 2px;
-        background: var(--japan-gold-grad); 
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        box-shadow: inset 0 0 4px rgba(0,0,0,0.4);
+      content: ''; position: absolute; inset: 4px; border-radius: 50%; padding: 2px;
+      background: var(--gold-grad);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
     }
-
     .yanxuan-text {
-        font-family: 'Noto Serif TC', serif;
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 1.1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
-        background: var(--japan-gold-grad);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.5));
+      font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 17px; line-height: 1.12;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2;
+      background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,.5));
     }
 
     .logo-text h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--foreground);
-      line-height: 1.2;
+      font-size: 1.45rem; font-weight: 900; line-height: 1.2; letter-spacing: .12em;
+      background: var(--gold-grad); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
     }
+    .logo-text p { font-size: .7rem; color: rgba(245,241,230,.65); letter-spacing: .14em; }
 
-    .logo-text p {
-      font-size: 0.75rem;
-      color: var(--muted-foreground);
-      letter-spacing: 0.05em;
-    }
-
-    .nav-desktop {
-      display: none;
-      gap: 1.5rem; 
-    }
-
+    .nav-desktop { display: none; gap: 2rem; }
     .nav-desktop a {
-      color: var(--foreground);
-      font-weight: 500;
-      position: relative;
-      white-space: nowrap;
+      color: rgba(245,241,230,.85); font-weight: 400; font-size: .95rem;
+      letter-spacing: .1em; position: relative; white-space: nowrap; padding: .3rem 0;
     }
-
     .nav-desktop a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: var(--primary);
-      transition: width 0.3s ease;
+      content: ''; position: absolute; width: 0; height: 1px; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold-grad-soft); transition: width .35s ease;
     }
+    .nav-desktop a:hover { color: var(--gold-bright); }
+    .nav-desktop a:hover::after { width: 100%; }
 
-    .nav-desktop a:hover {
-      color: var(--primary);
-    }
-
-    .nav-desktop a:hover::after {
-      width: 100%;
-    }
-
-    .header-cta {
-      display: none;
-      align-items: center;
-      gap: 1.5rem;
-      flex-shrink: 0;
-      margin-left: 3rem;
-    }
-
+    .header-cta { display: none; align-items: center; gap: 1.25rem; flex-shrink: 0; margin-left: 2.5rem; }
     .header-phone {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 1.1rem;
-      white-space: nowrap; 
+      display: flex; align-items: center; gap: .5rem;
+      color: var(--gold-bright); font-weight: 700; font-size: 1.05rem;
+      font-family: 'Noto Serif TC', serif; letter-spacing: .05em; white-space: nowrap;
     }
+
+    .social-icons { display: flex; gap: .5rem; }
+    .social-icons a {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(212,175,90,.4); color: var(--gold-pale);
+      transition: all .3s ease;
+    }
+    .social-icons a:hover { background: rgba(212,175,90,.15); border-color: var(--gold-bright); transform: translateY(-2px); }
+    .social-icons a.is-line { background: var(--line-green); border-color: var(--line-green); }
+    .social-icons a.is-line:hover { background: #05a546; }
 
     /* Mobile Menu */
-    .mobile-menu-btn {
-      display: flex;
-      padding: 0.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--foreground);
-      z-index: 101;
-    }
+    .mobile-menu-btn { display: flex; padding: .5rem; background: none; border: none; cursor: pointer; color: var(--gold-pale); z-index: 101; }
 
     .mobile-menu {
-      position: fixed;
-      top: var(--header-height);
-      left: 0;
-      right: 0;
-      background-color: white;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow-card);
-      transform: translateY(-150%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 99;
-      text-align: center;
+      position: fixed; top: var(--header-height); left: 0; right: 0;
+      background: rgba(9,14,46,.98); backdrop-filter: blur(10px);
+      padding: 1rem 0 1.5rem; border-bottom: 1px solid rgba(212,175,90,.25);
+      transform: translateY(-150%); transition: transform .45s cubic-bezier(.16,1,.3,1);
+      z-index: 99; text-align: center;
     }
-
-    .mobile-menu.active {
-      transform: translateY(0);
-    }
-
+    .mobile-menu.active { transform: translateY(0); }
     .mobile-menu a {
-      display: block;
-      padding: 1rem;
-      font-size: 1.1rem;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
+      display: block; padding: .95rem; font-size: 1.05rem; letter-spacing: .15em;
+      color: rgba(245,241,230,.85); border-bottom: 1px solid rgba(212,175,90,.08);
     }
-      
-    .mobile-menu a:last-child {
-      border-bottom: none;
-      color: var(--primary);
-      font-weight: 700;
-    }
+    .mobile-menu a:hover { color: var(--gold-bright); }
+    .mobile-menu a:last-child { border-bottom: none; color: var(--gold-bright); font-weight: 700; }
 
-    /* Hero Section */
+    /* ============ Hero ============ */
     .hero {
-      position: relative;
-      min-height: 100vh;
-      height: auto;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      padding: 120px 0 80px;
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      overflow: hidden; padding: 130px 0 90px;
+      background-color: var(--indigo-deep);
     }
-
     .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('walkinpaark.png') center/cover no-repeat;
-      z-index: 0;
+      position: absolute; inset: 0; z-index: 0;
+      /* 第一層為本機圖片，若不存在則自動顯示第二層線上版圖片 */
+      background-image: url('walkinpaark.png'), url('https://wangdeshian.github.io/AdamAgency.tw/walkinpaark.png');
+      background-position: center, center;
+      background-size: cover, cover;
+      background-repeat: no-repeat, no-repeat;
     }
-
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, 
-        rgba(10, 36, 75, 0.95) 0%, 
-        rgba(10, 36, 75, 0.85) 50%, 
-        rgba(10, 36, 75, 0.4) 100%);
-      z-index: 1;
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(100deg,
+        rgba(9, 14, 46, .94) 0%,
+        rgba(12, 19, 56, .82) 45%,
+        rgba(15, 23, 66, .30) 100%);
+    }
+    /* 細緻金線紋理 */
+    .hero::after {
+      content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background-image: repeating-linear-gradient(115deg, rgba(212,175,90,.05) 0 1px, transparent 1px 120px);
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      max-width: 800px;
-    }
+    .hero-content { position: relative; z-index: 10; max-width: 820px; }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50px;
-      padding: 0.5rem 1rem;
-      margin-bottom: 2rem;
-      color: #ffffff;
-      font-size: 0.9rem;
-      font-weight: 500;
+      display: inline-flex; align-items: center; gap: .6rem;
+      border: 1px solid rgba(212,175,90,.55); border-radius: 2px;
+      padding: .5rem 1.3rem; margin-bottom: 2.2rem;
+      color: var(--gold-pale); font-size: .85rem; letter-spacing: .3em; font-weight: 500;
+      background: rgba(212,175,90,.07); backdrop-filter: blur(4px);
     }
 
     .hero h2 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      color: #ffffff;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
+      font-size: clamp(2.6rem, 5.2vw, 4.2rem); color: #f5f1e6;
+      line-height: 1.18; margin-bottom: 1.6rem; font-weight: 900; letter-spacing: .06em;
+    }
+    .hero h2 .brand {
+      background: var(--gold-grad); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.45));
+    }
+    .hero-sub {
+      display: block; margin-top: .9rem;
+      font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 700;
+      color: rgba(245,241,230,.92); letter-spacing: .35em;
+    }
+
+    .hero-divider {
+      width: 72px; height: 2px; background: var(--gold-grad-soft); margin: 1.8rem 0;
     }
 
     .hero-description {
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 600px;
-      margin-bottom: 2.5rem;
-      font-weight: 300;
+      font-size: 1.1rem; color: rgba(245,241,230,.82); max-width: 620px;
+      margin-bottom: 2.6rem; font-weight: 300; line-height: 2.1;
     }
+    .hero-description strong { color: var(--gold-bright); font-weight: 700; }
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 4rem;
-    }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 4.2rem; }
 
     .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      max-width: 600px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+      padding-top: 2.2rem; border-top: 1px solid rgba(212,175,90,.28); max-width: 620px;
     }
-
     .hero-stat h3 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
-      margin-bottom: 0.5rem;
+      font-size: 2.7rem; font-weight: 900; line-height: 1; margin-bottom: .5rem;
+      background: var(--gold-grad); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
     }
+    .hero-stat p { color: rgba(245,241,230,.6); font-size: .88rem; letter-spacing: .18em; }
 
-    .hero-stat p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.9rem;
-    }
+    /* ============ 通用 Section ============ */
+    section { padding: 6.5rem 0; }
 
-    /* Common Section */
-    section {
-      padding: 6rem 0;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 4rem;
-    }
-
+    .section-header { text-align: center; max-width: 720px; margin: 0 auto 4.2rem; }
     .section-label {
-      display: inline-block;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+      display: inline-flex; align-items: center; gap: .9rem;
+      color: var(--gold); font-weight: 500; font-size: .8rem;
+      letter-spacing: .42em; text-transform: uppercase; margin-bottom: 1.2rem;
     }
-
+    .section-label::before, .section-label::after {
+      content: ''; width: 32px; height: 1px; background: var(--gold-grad-soft);
+    }
     .section-header h2 {
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      font-weight: 700;
-      color: var(--foreground);
-      margin-bottom: 1.5rem;
+      font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 900;
+      color: var(--indigo); margin-bottom: 1.2rem; letter-spacing: .1em;
     }
+    .section-header p { font-size: 1.05rem; color: var(--ink-soft); font-weight: 300; }
 
-    .section-header p {
-      font-size: 1.125rem;
-      color: var(--muted-foreground);
-    }
+    /* 深色 section 的標題 */
+    .section-dark .section-header h2 { color: #f5f1e6; }
+    .section-dark .section-header p { color: rgba(245,241,230,.6); }
 
-    /* Services */
-    .services {
-      background-color: var(--background);
-    }
+    /* Scroll Reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.22,.61,.36,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .12s; }
+    .reveal-delay-2 { transition-delay: .24s; }
 
-    .services-grid {
-      display: grid;
-      gap: 2.5rem;
-      grid-template-columns: 1fr;
-    }
+    /* ============ Services ============ */
+    .services { background: var(--paper); position: relative; }
+
+    .services-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
 
     .service-card {
-      background-color: var(--card);
-      border-radius: var(--radius);
-      padding: 3rem;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
+      background: var(--card); border-radius: var(--radius);
+      padding: 2.8rem 2.4rem; border: 1px solid var(--hairline);
+      box-shadow: var(--shadow-soft);
+      display: flex; flex-direction: column; position: relative; overflow: hidden;
+      transition: transform .4s cubic-bezier(.22,.61,.36,1), box-shadow .4s ease, border-color .4s ease;
     }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--gold-grad); opacity: 0; transition: opacity .4s ease;
+    }
+    .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-card); border-color: rgba(179,135,40,.4); }
+    .service-card:hover::before { opacity: 1; }
 
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-float);
-      border-color: rgba(0,0,0,0);
+    .service-no {
+      font-family: 'Noto Serif TC', serif; font-size: .82rem; letter-spacing: .35em;
+      color: var(--gold); margin-bottom: 1.6rem; font-weight: 700;
     }
 
     .service-icon {
-      width: 70px;
-      height: 70px;
-      border-radius: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
+      width: 68px; height: 68px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1.8rem;
+      background: var(--indigo); color: var(--gold-bright);
+      box-shadow: 0 0 0 1px rgba(179,135,40,.5), 0 0 0 6px rgba(179,135,40,.08);
     }
 
-    .service-icon.accent { background: rgba(235, 94, 40, 0.1); color: var(--accent); }
-    .service-icon.primary { background: rgba(13, 59, 102, 0.1); color: var(--primary); }
+    .service-card h3 { font-size: 1.6rem; font-weight: 900; color: var(--indigo); letter-spacing: .08em; margin-bottom: .3rem; }
+    .service-en { color: var(--gold); font-size: .78rem; letter-spacing: .25em; text-transform: uppercase; margin-bottom: 1.4rem; }
+    .service-desc { margin-bottom: 1.8rem; color: var(--ink-soft); font-weight: 300; }
 
-    .service-card h3 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .service-features {
-      margin: 2rem 0 auto;
-    }
-
+    .service-features { margin: 0 0 auto; }
     .service-features li {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      color: var(--foreground);
+      display: flex; align-items: center; gap: .9rem; margin-bottom: .95rem;
+      color: var(--ink); font-size: .95rem;
     }
-
     .feature-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #c9a14d, #b38728); color: #fffdf4;
     }
-      
-    .feature-icon.accent { background: var(--accent); color: white; }
-    .feature-icon.primary { background: var(--primary); color: white; }
+    .service-cta { margin-top: 2.2rem; }
+    .service-cta .btn { width: 100%; }
 
-    /* New Styles for Guide Section (Qualifications & Costs) */
-    .guide-grid {
-      display: grid;
-      gap: 3rem;
-      grid-template-columns: 1fr;
-    }
+    /* ============ Guide (資格與費用) ============ */
+    .guide { background: linear-gradient(180deg, #f3efe4 0%, var(--paper) 100%); }
+
+    .guide-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; }
 
     .guide-card {
-      background-color: white;
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-soft);
-      border-top: 4px solid var(--primary);
+      background: var(--card); border-radius: var(--radius);
+      padding: 2.6rem 2.4rem; border: 1px solid var(--hairline);
+      box-shadow: var(--shadow-soft); position: relative; overflow: hidden;
+    }
+    .guide-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--gold-grad);
     }
 
     .guide-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--japan-deep-indigo);
+      font-family: 'Noto Serif TC', serif; font-size: 1.45rem; font-weight: 900;
+      margin-bottom: 1.6rem; display: flex; align-items: center; gap: .7rem;
+      color: var(--indigo); letter-spacing: .08em;
     }
+    .guide-title .icon { color: var(--gold); }
 
-    .guide-list li {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
+    .guide-subtitle {
+      font-family: 'Noto Serif TC', serif; color: var(--indigo);
+      margin: 1.2rem 0 1rem; font-size: 1.08rem; font-weight: 700; letter-spacing: .05em;
+      padding-bottom: .55rem; border-bottom: 1px solid var(--hairline);
+      display: flex; align-items: center; gap: .5rem;
     }
+    .guide-subtitle.is-accent { color: #9c711c; }
 
-    .guide-check {
-      color: var(--line-green);
-      flex-shrink: 0;
-      margin-top: 4px;
-    }
+    .guide-list li { margin-bottom: .95rem; display: flex; align-items: flex-start; gap: .75rem; font-size: .95rem; }
+    .guide-check { color: var(--gold); flex-shrink: 0; margin-top: 5px; }
 
-    .cost-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    .cost-table th, .cost-table td {
-      padding: 1rem;
-      border-bottom: 1px solid #eee;
-      text-align: left;
-    }
-
+    .cost-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; font-size: .95rem; }
+    .cost-table th, .cost-table td { padding: .9rem 1rem; border-bottom: 1px solid var(--hairline); text-align: left; }
     .cost-table th {
-      background-color: #f8fafc;
-      color: var(--primary);
-      font-weight: 700;
+      background: var(--indigo); color: var(--gold-pale);
+      font-family: 'Noto Serif TC', serif; font-weight: 700; letter-spacing: .12em;
     }
-
-    .cost-total {
-      background-color: #f0f4f8;
-      font-weight: 700;
-      color: var(--japan-deep-indigo);
+    .cost-table th:first-child { border-radius: 6px 0 0 0; }
+    .cost-table th:last-child { border-radius: 0 6px 0 0; }
+    .cost-table tr:hover td { background: rgba(179,135,40,.04); }
+    .cost-total td {
+      background: linear-gradient(135deg, rgba(191,149,63,.14), rgba(170,119,28,.1));
+      font-family: 'Noto Serif TC', serif; font-weight: 900; color: var(--indigo); font-size: 1.02rem;
     }
+    .cost-note { font-size: .78em; color: #a09a88; }
 
-    /* Testimonials */
+    .fee-box {
+      margin-top: 1.5rem; border-top: 1px solid var(--hairline); padding-top: 1.2rem;
+    }
+    .fee-box-title { font-family: 'Noto Serif TC', serif; font-weight: 700; color: var(--indigo); margin-bottom: .5rem; letter-spacing: .05em; }
+    .fee-box ul { font-size: .9rem; color: var(--ink-soft); list-style: disc; padding-left: 1.2rem; }
+    .fee-box ul li { margin-bottom: .35rem; }
+
+    .notice-gold {
+      margin-top: 1.2rem; padding: 1rem 1.1rem;
+      background: linear-gradient(135deg, rgba(191,149,63,.09), rgba(170,119,28,.05));
+      border-radius: 8px; border-left: 3px solid var(--gold);
+      font-size: .87rem; color: var(--ink); line-height: 1.8;
+    }
+    .notice-gold strong { color: #9c711c; }
+
+    /* ============ Training ============ */
+    .training { background: var(--paper); }
+    .training-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+
+    .training-card {
+      padding: 2.6rem 2rem; background: var(--card);
+      border: 1px solid var(--hairline); border-radius: var(--radius); text-align: center;
+      box-shadow: var(--shadow-soft);
+      transition: transform .4s cubic-bezier(.22,.61,.36,1), box-shadow .4s ease, border-color .4s ease;
+      position: relative;
+    }
+    .training-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-card); border-color: rgba(179,135,40,.4); }
+
+    .training-icon {
+      width: 64px; height: 64px; margin: 0 auto 1.6rem;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--indigo); color: var(--gold-bright);
+      box-shadow: 0 0 0 1px rgba(179,135,40,.5), 0 0 0 6px rgba(179,135,40,.08);
+    }
+    .training-card h3 { margin-bottom: .9rem; font-size: 1.25rem; font-weight: 900; color: var(--indigo); letter-spacing: .08em; }
+    .training-card p { color: var(--ink-soft); font-size: .95rem; font-weight: 300; }
+
+    /* ============ Testimonials（深色） ============ */
     .testimonials {
-      background-color: #f8fafc;
+      background:
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(179,135,40,.13), transparent 60%),
+        linear-gradient(180deg, var(--indigo-deep), var(--indigo));
+      position: relative;
     }
+    .testimonials::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,90,.5), transparent);
+    }
+    .testimonials .section-label { color: var(--gold-bright); }
 
-    .testimonials-grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr;
-    }
+    .testimonials-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
 
     .testimonial-card {
-      background-color: white;
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      transition: transform 0.3s ease;
+      background: rgba(255,253,248,.045);
+      border: 1px solid rgba(212,175,90,.22);
+      border-radius: var(--radius); padding: 2.4rem 2.1rem;
+      backdrop-filter: blur(6px);
+      transition: transform .4s ease, border-color .4s ease, background .4s ease;
+      display: flex; flex-direction: column;
     }
-    
-    .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-card);
-    }
+    .testimonial-card:hover { transform: translateY(-6px); border-color: rgba(212,175,90,.5); background: rgba(255,253,248,.07); }
 
-    .quote-icon {
-      margin-bottom: 1.5rem;
-      color: var(--accent);
-      opacity: 0.3;
-    }
-
-    .testimonial-stars {
-      color: #fbbf24;
-      display: flex;
-      gap: 2px;
-      margin-bottom: 1.5rem;
-    }
+    .quote-icon { margin-bottom: 1.2rem; color: var(--gold-bright); opacity: .55; }
+    .testimonial-stars { color: var(--gold-bright); letter-spacing: .25em; margin-bottom: 1.3rem; font-size: .95rem; }
 
     .testimonial-content {
-      font-size: 1.05rem;
-      color: var(--foreground);
-      margin-bottom: 2rem;
-      font-style: italic;
-      line-height: 1.8;
+      font-size: 1rem; color: rgba(245,241,230,.88);
+      margin-bottom: 1.8rem; line-height: 2; font-weight: 300; flex: 1;
     }
 
-    .testimonial-footer {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
+    .testimonial-footer { display: flex; align-items: center; gap: 1rem; padding-top: 1.2rem; border-top: 1px solid rgba(212,175,90,.16); }
     .testimonial-avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #f0f4f8;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary);
+      width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(212,175,90,.12); border: 1px solid rgba(212,175,90,.4);
+      display: flex; align-items: center; justify-content: center; color: var(--gold-bright);
     }
+    .testimonial-author h4 { font-weight: 700; color: var(--gold-pale); font-size: 1rem; margin-bottom: .1rem; letter-spacing: .1em; }
+    .testimonial-author p { font-size: .78rem; color: rgba(245,241,230,.5); letter-spacing: .08em; }
 
-    .testimonial-author h4 {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-    }
-      
-    .testimonial-author p {
-      font-size: 0.8rem;
-      color: var(--muted-foreground);
-    }
-
-    /* FAQ */
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+    /* ============ FAQ ============ */
+    .faq { background: var(--paper); }
+    .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: .9rem; }
 
     .faq-item {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      overflow: hidden;
+      background: var(--card); border-radius: 10px;
+      border: 1px solid var(--hairline); overflow: hidden;
+      transition: border-color .3s ease, box-shadow .3s ease;
     }
-      
-    .faq-item.active {
-      border-color: var(--primary);
-      box-shadow: var(--shadow-soft);
-    }
+    .faq-item.active { border-color: rgba(179,135,40,.55); box-shadow: var(--shadow-soft); }
 
     .faq-question {
-      width: 100%;
-      padding: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: none;
-      border: none;
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--foreground);
-      cursor: pointer;
-      text-align: left;
+      width: 100%; padding: 1.35rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      background: none; border: none; cursor: pointer; text-align: left;
+      font-family: 'Noto Serif TC', serif; font-size: 1.08rem; font-weight: 700;
+      color: var(--indigo); letter-spacing: .04em;
     }
-      
-    .faq-question:hover {
-      color: var(--primary);
-    }
+    .faq-question:hover { color: #9c711c; }
+    .faq-question svg { transition: transform .35s ease; color: var(--gold); flex-shrink: 0; }
+    .faq-item.active .faq-question svg { transform: rotate(180deg); }
 
-    .faq-question svg {
-      transition: transform 0.3s;
-      color: var(--muted-foreground);
-    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .4s ease; background: linear-gradient(180deg, rgba(179,135,40,.045), transparent); }
+    .faq-item.active .faq-answer { max-height: 460px; }
+    .faq-answer-inner { padding: .2rem 1.5rem 1.5rem; color: var(--ink-soft); line-height: 2; font-size: .95rem; }
+    .faq-answer-inner strong { color: var(--indigo); }
+    .faq-answer-inner a { color: #9c711c; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+    .faq-answer-inner ul { list-style: disc; padding-left: 1.3rem; }
 
-    .faq-item.active .faq-question svg {
-      transform: rotate(180deg);
-      color: var(--primary);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      background-color: #fafafa;
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-    }
-
-    .faq-answer-inner {
-      padding: 0 1.5rem 1.5rem;
-      color: var(--muted-foreground);
-      line-height: 1.8;
-    }
-
-    /* Footer */
+    /* ============ Footer ============ */
     .footer {
-      background-color: var(--primary);
-      color: white;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);
+      color: rgba(245,241,230,.85); position: relative; overflow: hidden;
+    }
+    .footer::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,90,.6), transparent);
     }
 
     .footer-cta {
-      padding: 5rem 0;
-      text-align: center;
-      background: rgba(255,255,255,0.03);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 5.5rem 0; text-align: center;
+      border-bottom: 1px solid rgba(212,175,90,.16);
+      position: relative;
     }
-
     .footer-cta h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 1rem; font-weight: 900; letter-spacing: .12em;
+      background: var(--gold-grad); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
     }
+    .footer-cta > .container > p { margin-bottom: 2.4rem; font-size: 1.05rem; color: rgba(245,241,230,.65); font-weight: 300; }
 
-    .footer-content {
-      padding: 4rem 0 2rem;
-    }
+    .footer-content { padding: 4.5rem 0 2rem; }
+    .footer-grid { display: grid; gap: 3rem; grid-template-columns: 1fr; }
 
-    .footer-grid {
-      display: grid;
-      gap: 3rem;
-      grid-template-columns: 1fr;
-    }
-
-    .footer-company p {
-      opacity: 0.8;
-      margin: 1.5rem 0;
-    }
-
+    .footer-company > p { color: rgba(245,241,230,.6); margin: 1.6rem 0; font-weight: 300; font-size: .95rem; }
     .license {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 4px;
-      font-size: 0.85rem;
+      display: inline-block; padding: 5px 14px;
+      border: 1px solid rgba(212,175,90,.5); border-radius: 2px;
+      font-size: .82rem; color: var(--gold-pale); letter-spacing: .15em;
     }
 
     .footer h4 {
-      font-size: 1.25rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.75rem;
+      font-size: 1.15rem; margin-bottom: 1.5rem; position: relative; padding-bottom: .7rem;
+      color: var(--gold-pale); font-weight: 700; letter-spacing: .18em;
     }
-      
     .footer h4::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 40px;
-      height: 3px;
-      background-color: var(--accent);
+      content: ''; position: absolute; left: 0; bottom: 0; width: 36px; height: 2px;
+      background: var(--gold-grad-soft);
     }
 
-    .footer li {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.25rem;
-    }
+    .footer li { display: flex; gap: .9rem; margin-bottom: 1.15rem; font-size: .93rem; align-items: center; }
+    .footer li .icon-sm { color: var(--gold-bright); flex-shrink: 0; }
+    .footer li a { display: flex; gap: .9rem; align-items: center; color: inherit; }
+    .footer li a:hover { color: var(--gold-bright); }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 2rem 0;
-      text-align: center;
-      font-size: 0.875rem;
-      opacity: 0.6;
+      border-top: 1px solid rgba(212,175,90,.12); padding: 2rem 0; text-align: center;
+      font-size: .82rem; color: rgba(245,241,230,.4); letter-spacing: .08em;
     }
 
-    /* Line Button */
+    /* ============ LINE 浮動按鈕 ============ */
     .line-btn {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 90;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      background-color: var(--line-green);
-      color: white;
-      padding: 0.875rem 1.5rem;
-      border-radius: 50px;
-      box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
-      font-weight: 700;
-      transition: transform 0.3s;
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 90;
+      display: flex; align-items: center; gap: .7rem;
+      background: var(--line-green); color: #fff;
+      padding: .85rem 1.5rem; border-radius: 50px;
+      box-shadow: 0 8px 26px rgba(6,199,85,.45);
+      font-weight: 700; letter-spacing: .05em;
+      transition: transform .3s ease, box-shadow .3s ease;
     }
+    .line-btn:hover { transform: scale(1.05) translateY(-3px); box-shadow: 0 12px 32px rgba(6,199,85,.55); }
 
-    .line-btn:hover {
-      transform: scale(1.05) translateY(-2px);
-    }
-
-    /* Media Queries */
+    /* ============ Media Queries ============ */
     @media (min-width: 768px) {
       .header-cta, .nav-desktop { display: flex; }
       .mobile-menu-btn { display: none; }
@@ -875,41 +591,30 @@
       .guide-grid { grid-template-columns: 1fr 1fr; }
       .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
-      
-      .header-cta {
-         margin-left: 3rem;
-      }
     }
-    
     @media (min-width: 1024px) {
       .services-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
-    /* Animation Utilities */
-    .animate-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-      
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 <body>
-
+  <!-- ============ Header ============ -->
   <header class="header" id="header">
     <div class="container header-inner">
       <div class="logo">
         <div class="logo-japan-container">
-            <div class="yanxuan-text">
-                <span>嚴</span>
-                <span>選</span>
-            </div>
+          <div class="yanxuan-text">
+            <span>嚴</span>
+            <span>選</span>
+          </div>
         </div>
         <div class="logo-text">
-          <h1 class="calligraphy-text">得賢引才</h1>
+          <h1>得賢引才</h1>
           <p>聯捷人力 (私業許字第2430號)</p>
         </div>
       </div>
@@ -928,24 +633,16 @@
           <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           0985-296-485
         </a>
-        <div style="display: flex; gap: 0.5rem;">
-            <a href="https://www.facebook.com/AdamAgency.tw" target="_blank" class="btn btn-primary" aria-label="Facebook" style="padding: 0.75rem;">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/wangdeshian" target="_blank" class="btn btn-accent" aria-label="Instagram" style="padding: 0.75rem;">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-            </a>
-            <a href="https://lin.ee/nCWi9eA" target="_blank" class="btn btn-line" aria-label="LINE" style="padding: 0.75rem;">
-                <svg class="icon" viewBox="0 0 24 24" style="fill: white; stroke: none;">
-                    <path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.97 2.97 7.35 7.07 8.46.36.1.86.26.98.6.11.31.07.78.03 1.08l-.15.9c-.04.27-.21 1.07.94.58 1.15-.49 6.22-3.66 8.48-6.27.84-.97 1.3-2.08 1.3-3.18C20.65 5.92 16.17 2 12 2z"/>
-                </svg>
-            </a>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/AdamAgency.tw" target="_blank" aria-label="Facebook">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://www.instagram.com/wangdeshian" target="_blank" aria-label="Instagram">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://lin.ee/nCWi9eA" target="_blank" class="is-line" aria-label="LINE">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" style="fill: white; stroke: none;"><path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.97 2.97 7.35 7.07 8.46.36.1.86.26.98.6.11.31.07.78.03 1.08l-.15.9c-.04.27-.21 1.07.94.58 1.15-.49 6.22-3.66 8.48-6.27.84-.97 1.3-2.08 1.3-3.18C20.65 5.92 16.17 2 12 2z"/></svg>
+          </a>
         </div>
       </div>
 
@@ -954,7 +651,7 @@
         <svg id="closeIcon" class="icon" viewBox="0 0 24 24" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
-    
+
     <div class="mobile-menu" id="mobileMenu">
       <a href="#home">首頁</a>
       <a href="#services">服務項目</a>
@@ -966,37 +663,38 @@
     </div>
   </header>
 
+  <!-- ============ Hero ============ -->
   <section id="home" class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="container hero-content animate-in">
+    <div class="container hero-content">
       <div class="hero-badge">
-        <svg class="icon icon-sm" viewBox="0 0 24 24" style="stroke: var(--accent);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <svg class="icon icon-sm" viewBox="0 0 24 24" style="stroke: var(--gold-bright);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         政府立案・安心首選
       </div>
 
       <h2>
-        <span class="calligraphy-text">得賢引才</span>
-        <span style="font-family: 'Noto Sans TC', sans-serif; font-size: 0.5em; vertical-align: middle; font-weight: 700;">｜專業媒合外籍移工</span>
-        <br>
-        <span style="font-family: 'Noto Sans TC', sans-serif; color:var(--accent); font-size: 0.6em; display:block; margin-top:0.5rem; font-weight: 700; letter-spacing: 0;">用心陪伴・視如己親</span>
+        <span class="brand">得賢引才</span>
+        <span class="hero-sub">專業媒合外籍移工｜用心陪伴・視如己親</span>
       </h2>
-      
+
+      <div class="hero-divider"></div>
+
       <p class="hero-description">
         累積二十年深厚經驗，由擁有<strong>「乙級就業服務技術士」</strong>與<strong>「長照人員」</strong>雙重專業證照的顧問親自把關。我們不只懂法規，更懂照顧細節。從申請到安頓，為您嚴選最適合的人力，提供真正無後顧之憂的一站式服務。
       </p>
 
       <div class="hero-buttons">
-        <a href="https://www.imaid.com.tw/biox/index.php?fun=resume&sales=adam" target="_blank" class="btn btn-hero">
+        <a href="https://www.imaid.com.tw/biox/index.php?fun=resume&sales=adam" target="_blank" class="btn btn-gold btn-hero">
           <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           預約挑工
         </a>
-        <a href="#services" class="btn btn-hero-outline">了解服務</a>
+        <a href="#services" class="btn btn-outline-gold btn-hero">了解服務</a>
       </div>
 
       <div class="hero-stats">
         <div class="hero-stat">
-          <h3>20+</h3>
+          <h3>12+</h3>
           <p>年服務經驗</p>
         </div>
         <div class="hero-stat">
@@ -1011,90 +709,90 @@
     </div>
   </section>
 
+  <!-- ============ Services ============ -->
   <section id="services" class="services">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Our Services</span>
         <h2>服務項目</h2>
         <p>提供全方位的人力仲介服務，精準媒合您的需求</p>
       </div>
 
       <div class="services-grid">
-        
-        <div class="service-card">
-          <div class="service-icon accent">
+        <div class="service-card reveal">
+          <div class="service-no">〇一</div>
+          <div class="service-icon">
             <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
           </div>
           <h3>家庭看護 / 幫傭</h3>
-          <p style="color:var(--muted-foreground); margin-bottom:1.5rem;">Household Care & Helper</p>
-          <p style="margin-bottom:2rem;">針對長者照護、失能照顧提供專業外籍看護；亦提供家庭幫傭服務，協助家務清潔與膳食料理。</p>
-          
+          <p class="service-en">Household Care &amp; Helper</p>
+          <p class="service-desc">針對長者照護、失能照顧提供專業外籍看護；亦提供家庭幫傭服務，協助家務清潔與膳食料理。</p>
           <ul class="service-features">
-            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 長者日常起居照護</li>
-            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 家務清潔與烹飪</li>
-            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 專業護理訓練認證</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 長者日常起居照護</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 家務清潔與烹飪</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 專業護理訓練認證</li>
           </ul>
-          <div style="margin-top:auto; padding-top:2rem;">
-            <a href="https://www.imaid.com.tw/biox/index.php?fun=resume&sales=adam" target="_blank" class="btn btn-accent" style="width:100%">預約挑工</a>
+          <div class="service-cta">
+            <a href="https://www.imaid.com.tw/biox/index.php?fun=resume&sales=adam" target="_blank" class="btn btn-gold">預約挑工</a>
           </div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon primary">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-no">〇二</div>
+          <div class="service-icon">
             <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14M8 21v-2a4 4 0 0 1 4-4v0a4 4 0 0 1 4 4v2"/></svg>
           </div>
           <h3>機構看護</h3>
-          <p style="color:var(--muted-foreground); margin-bottom:1.5rem;">Institutional Care</p>
-          <p style="margin-bottom:2rem;">協助護理之家、養護機構引進專業照服員，解決排班人力缺口，提升照護品質。</p>
-          
+          <p class="service-en">Institutional Care</p>
+          <p class="service-desc">協助護理之家、養護機構引進專業照服員，解決排班人力缺口，提升照護品質。</p>
           <ul class="service-features">
-            <li><div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 配合機構輪班制</li>
-            <li><div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 具備基礎護理常識</li>
-            <li><div class="feature-icon primary"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 大量引進專案規劃</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 配合機構輪班制</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 具備基礎護理常識</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 大量引進專案規劃</li>
           </ul>
-          <div style="margin-top:auto; padding-top:2rem;">
-            <a href="#contact" class="btn btn-primary" style="width:100%">機構諮詢</a>
+          <div class="service-cta">
+            <a href="#contact" class="btn btn-indigo">機構諮詢</a>
           </div>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon accent">
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-no">〇三</div>
+          <div class="service-icon">
             <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
           </div>
           <h3>廠工人力</h3>
-          <p style="color:var(--muted-foreground); margin-bottom:1.5rem;">Industrial Labor</p>
-          <p style="margin-bottom:2rem;">協助製造業、營造業引進優質外籍勞工，解決缺工問題，提升產能效率。</p>
-          
+          <p class="service-en">Industrial Labor</p>
+          <p class="service-desc">協助製造業、營造業引進優質外籍勞工，解決缺工問題，提升產能效率。</p>
           <ul class="service-features">
-            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 專業技術工與一般工</li>
-            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 合法快速申請流程</li>
-            <li><div class="feature-icon accent"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 完善宿舍管理輔導</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 專業技術工與一般工</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 合法快速申請流程</li>
+            <li><div class="feature-icon"><svg class="icon icon-sm" viewBox="0 0 24 24" style="width:13px;height:13px;"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 完善宿舍管理輔導</li>
           </ul>
-          <div style="margin-top:auto; padding-top:2rem;">
-            <a href="#contact" class="btn btn-accent" style="width:100%">企業諮詢</a>
+          <div class="service-cta">
+            <a href="#contact" class="btn btn-indigo">企業諮詢</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="guide" style="background-color: #f8fafc;">
+  <!-- ============ Guide ============ -->
+  <section id="guide" class="guide">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Guide & Costs</span>
+      <div class="section-header reveal">
+        <span class="section-label">Guide &amp; Costs</span>
         <h2>申請資格與費用明細</h2>
         <p>資訊公開透明，讓您聘僱更安心 (2026年最新標準)</p>
       </div>
 
       <div class="guide-grid">
-        <div class="guide-card">
+        <div class="guide-card reveal">
           <div class="guide-title">
             <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             申請資格懶人包
           </div>
-          
-          <h4 style="color:var(--japan-deep-indigo); margin-top:0.5rem; margin-bottom:0.8rem; font-size:1.1rem; border-bottom:2px solid var(--border); padding-bottom:0.5rem;">🏥 家庭外籍看護 (照顧長照/病患)</h4>
+
+          <h4 class="guide-subtitle">🏥 家庭外籍看護 (照顧長照/病患)</h4>
           <ul class="guide-list">
             <li>
               <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1118,26 +816,26 @@
             </li>
           </ul>
 
-          <h4 style="color:var(--accent); margin-top:1.5rem; margin-bottom:0.8rem; font-size:1.1rem; border-bottom:2px solid var(--border); padding-bottom:0.5rem;">🏠 家庭外籍幫傭 (2026/4/13 新制上路🔥)</h4>
+          <h4 class="guide-subtitle is-accent">🏠 家庭外籍幫傭 (2026/4/13 新制上路🔥)</h4>
           <ul class="guide-list">
             <li>
-              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24" style="color:var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>一般家庭：</strong>家有 <strong>1名未滿12歲兒童</strong> 即可申請。</span>
             </li>
             <li>
-              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24" style="color:var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg class="guide-check icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>特殊家庭優先：</strong>家有2名(含1名未滿6歲)或3名未滿12歲兒童、單親/身障家長育有1名未滿12歲兒童，或孩童具罕病/遲緩等狀況，享優先審核與規費減免。</span>
             </li>
           </ul>
         </div>
 
-        <div class="guide-card">
+        <div class="guide-card reveal reveal-delay-1">
           <div class="guide-title">
             <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             雇主每月負擔費用
           </div>
-          <p style="color:var(--muted-foreground);">外籍看護工 (家庭類) 每月基本支出預估：</p>
-          
+          <p style="color:var(--ink-soft); font-weight:300;">外籍看護工 (家庭類) 每月基本支出預估：</p>
+
           <table class="cost-table">
             <tr>
               <th>項目</th>
@@ -1149,7 +847,7 @@
             </tr>
             <tr>
               <td>健保費 (雇主負擔)</td>
-              <td>$1,428 <span style="font-size:0.8em; color:#999;">(2026年費率)</span></td>
+              <td>$1,428 <span class="cost-note">(2026年費率)</span></td>
             </tr>
             <tr>
               <td>就業安定費</td>
@@ -1157,26 +855,26 @@
             </tr>
             <tr>
               <td>職災保險費</td>
-              <td>$56 <span style="font-size:0.8em; color:#999;">(2026年費率)</span></td>
+              <td>$56 <span class="cost-note">(2026年費率)</span></td>
             </tr>
             <tr>
               <td>加班費 (4個週日)</td>
-              <td>$2,668 <span style="font-size:0.8em; color:#999;">($667/天)</span></td>
+              <td>$2,668 <span class="cost-note">($667/天)</span></td>
             </tr>
             <tr class="cost-total">
               <td>每月總計</td>
               <td>約 $26,158</td>
             </tr>
           </table>
-          
-          <div style="margin-top:1.5rem; border-top:1px solid #eee; padding-top:1rem;">
-            <p style="font-weight:700; color:var(--japan-deep-indigo); margin-bottom:0.5rem;">合法仲介代辦收費標準：</p>
-            <ul style="font-size:0.9rem; color:var(--muted-foreground); list-style:disc; padding-left:1.2rem;">
+
+          <div class="fee-box">
+            <p class="fee-box-title">合法仲介代辦收費標準：</p>
+            <ul>
               <li><strong>登記費及介紹費：</strong>依規定不超過外勞第一個月薪資 (上限 $20,000 元/次)。</li>
               <li><strong>仲介服務費：</strong>依規定每年不超過 $2,000 元。</li>
             </ul>
-            
-            <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(235, 94, 40, 0.05); border-radius: 8px; border-left: 4px solid var(--accent); font-size: 0.85rem; color: var(--foreground); line-height: 1.6;">
+
+            <div class="notice-gold">
               <strong>📢 2026幫傭新制規費提醒：</strong><br>
               申請「外籍家庭幫傭」，一般家庭之就業安定費為每月 <strong>$5,000</strong>；若符合特殊需求家庭條件，則減免為每月 <strong>$2,000</strong>。
             </div>
@@ -1186,122 +884,123 @@
     </div>
   </section>
 
-  <section id="training" style="background-color: white;">
+  <!-- ============ Training ============ -->
+  <section id="training" class="training">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Professional Training</span>
         <h2>嚴格職前訓練</h2>
         <p>不只媒合，更重視品質。每一位入境的勞工都經過層層把關。</p>
       </div>
 
-      <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        
-        <div style="padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius); text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <div style="width: 60px; height: 60px; background: rgba(13, 59, 102, 0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+      <div class="training-grid">
+        <div class="training-card reveal">
+          <div class="training-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
           </div>
-          <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">語言溝通訓練</h3>
-          <p style="color: var(--muted-foreground);">針對台灣雇主需求，加強基礎華語與台語訓練，確保溝通順暢，減少照護隔閡。</p>
+          <h3>語言溝通訓練</h3>
+          <p>針對台灣雇主需求，加強基礎華語與台語訓練，確保溝通順暢，減少照護隔閡。</p>
         </div>
 
-        <div style="padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius); text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <div style="width: 60px; height: 60px; background: rgba(235, 94, 40, 0.1); color: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+        <div class="training-card reveal reveal-delay-1">
+          <div class="training-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14h6"></path><path d="M9 10h6"></path><path d="M9 18h6"></path></svg>
           </div>
-          <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">專業照護技巧</h3>
-          <p style="color: var(--muted-foreground);">實務操作訓練，包含：翻身拍背、更換尿布、鼻胃管灌食協助、輪椅轉位等護理常識。</p>
+          <h3>專業照護技巧</h3>
+          <p>實務操作訓練，包含：翻身拍背、更換尿布、鼻胃管灌食協助、輪椅轉位等護理常識。</p>
         </div>
 
-        <div style="padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius); text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <div style="width: 60px; height: 60px; background: rgba(6, 199, 85, 0.1); color: var(--line-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+        <div class="training-card reveal reveal-delay-2">
+          <div class="training-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
-          <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">文化與心態輔導</h3>
-          <p style="color: var(--muted-foreground);">介紹台灣風俗民情與家庭習慣，建立正確的工作態度與服從性，加速融入雇主家庭。</p>
+          <h3>文化與心態輔導</h3>
+          <p>介紹台灣風俗民情與家庭習慣，建立正確的工作態度與服從性，加速融入雇主家庭。</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
+  <!-- ============ Testimonials ============ -->
+  <section id="testimonials" class="testimonials section-dark">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">Real Feedback</span>
         <h2>真實好評見證</h2>
         <p>來自雇主的真實心聲，見證我們的用心服務</p>
       </div>
 
       <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+        <div class="testimonial-card reveal">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor" style="stroke:none;"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-content">"真的非常感謝王先生的團隊。之前很擔心移工來了不會顧，結果阿蒂到職後把媽媽照顧得無微不至，服務真的很好，讓我們全家都很放心！"</p>
           <div class="testimonial-footer">
-              <div class="testimonial-avatar">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
-              </div>
-              <div class="testimonial-author">
-                <h4>林太太</h4>
-                <p>台北市 / 家庭看護</p>
-              </div>
+            <div class="testimonial-avatar">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="testimonial-author">
+              <h4>林太太</h4>
+              <p>台北市 / 家庭看護</p>
+            </div>
           </div>
         </div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor" style="stroke:none;"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-content">"之前換了好幾個外勞都不合適，讓人很頭痛。還好找到聯捷人力，幫我們媒合到現在這位阿妮，做事勤快又主動，幫了我們家很大的忙。"</p>
           <div class="testimonial-footer">
-              <div class="testimonial-avatar">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <div class="testimonial-author">
-                <h4>陳先生</h4>
-                <p>新北市 / 家庭看護</p>
-              </div>
+            <div class="testimonial-avatar">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="testimonial-author">
+              <h4>陳先生</h4>
+              <p>新北市 / 家庭看護</p>
+            </div>
           </div>
         </div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="quote-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor" style="stroke:none;"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg></div>
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-content">"我們家阿公脾氣比較拗，原本怕處不來。沒想到新的看護很有耐心，現在阿公跟她相處得很好，每天都有說有笑，也願意配合復健，真的很感謝！"</p>
           <div class="testimonial-footer">
-              <div class="testimonial-avatar">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
-              </div>
-              <div class="testimonial-author">
-                <h4>王小姐</h4>
-                <p>台北市 / 長照看護</p>
-              </div>
+            <div class="testimonial-avatar">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="testimonial-author">
+              <h4>王小姐</h4>
+              <p>台北市 / 長照看護</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
   <section id="faq" class="faq">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-label">FAQ</span>
         <h2>常見問題</h2>
         <p>解答您心中的疑問，讓申請流程更透明 (2026年最新資訊)</p>
       </div>
 
-      <div class="faq-list">
+      <div class="faq-list reveal">
         <div class="faq-item">
-            <button class="faq-question">
-              申請外籍看護大約需要多久時間？
-              <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                時間視移工來源而定：<br>
-                <strong>1. 國內承接：</strong> 人選已在台灣，手續較快，約 <strong>1~2 週</strong> 可完成接續聘僱並上工。<br>
-                <strong>2. 國外引進：</strong> 需經過國外選工、文件驗證、簽證申請、體檢及入境等跨國流程，通常約需 <strong>2.5 ~ 4 個月</strong>。我們會提供進度表協助您掌握狀況。
-              </div>
+          <button class="faq-question">
+            申請外籍看護大約需要多久時間？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              時間視移工來源而定：<br>
+              <strong>1. 國內承接：</strong> 人選已在台灣，手續較快，約 <strong>1~2 週</strong> 可完成接續聘僱並上工。<br>
+              <strong>2. 國外引進：</strong> 需經過國外選工、文件驗證、簽證申請、體檢及入境等跨國流程，通常約需 <strong>2.5 ~ 4 個月</strong>。我們會提供進度表協助您掌握狀況。
             </div>
+          </div>
         </div>
 
         <div class="faq-item">
@@ -1341,34 +1040,34 @@
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">
-              外勞不適任轉出後，我可以馬上引進新人嗎？會卡在什麼程序？
-              <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                這會遇到法規規定的「等待期」。依《就業服務法》規定，移工轉出後，雇主必須等待以下 <strong>任一條件</strong> 達成，才能向勞動部申請遞補招募函：<br>
-                1. 移工順利被新雇主承接。<br>
-                2. 移工已出國離境。<br>
-                3. 若無人承接且未離境，需等待 <strong>「廢止聘僱許可函」</strong> 發文滿 <strong>1 個月</strong> 後。<br>
-                因此，轉出期間確實會有一段合法的行政程序空窗期。<br><br>
-                <a href="https://www.facebook.com/share/p/18DT4WQzWi/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 700; text-decoration: underline;">
-                  💡 關於轉出程序的詳細圖文解說，請點此參考 FB 粉專貼文
-                </a>
-              </div>
+          <button class="faq-question">
+            外勞不適任轉出後，我可以馬上引進新人嗎？會卡在什麼程序？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              這會遇到法規規定的「等待期」。依《就業服務法》規定，移工轉出後，雇主必須等待以下 <strong>任一條件</strong> 達成，才能向勞動部申請遞補招募函：<br>
+              1. 移工順利被新雇主承接。<br>
+              2. 移工已出國離境。<br>
+              3. 若無人承接且未離境，需等待 <strong>「廢止聘僱許可函」</strong> 發文滿 <strong>1 個月</strong> 後。<br>
+              因此，轉出期間確實會有一段合法的行政程序空窗期。<br><br>
+              <a href="https://www.facebook.com/share/p/18DT4WQzWi/" target="_blank" rel="noopener noreferrer">
+                💡 關於轉出程序的詳細圖文解說，請點此參考 FB 粉專貼文
+              </a>
             </div>
+          </div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">
-              移工離開後，還會一直扣我的健保費或規費嗎？
-              <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                請放心，<strong>不會產生後續費用</strong>。移工確定轉出或離境當日，我們就會立即協助您辦理 <strong>退保</strong>（健保、職災保險）及向政府機關申報，確保行政規費（如就業安定費）計算截止於移工離開當天，嚴格把關您的荷包。
-              </div>
+          <button class="faq-question">
+            移工離開後，還會一直扣我的健保費或規費嗎？
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              請放心，<strong>不會產生後續費用</strong>。移工確定轉出或離境當日，我們就會立即協助您辦理 <strong>退保</strong>（健保、職災保險）及向政府機關申報，確保行政規費（如就業安定費）計算截止於移工離開當天，嚴格把關您的荷包。
             </div>
+          </div>
         </div>
 
         <div class="faq-item">
@@ -1382,7 +1081,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="faq-item">
           <button class="faq-question">
             網站寫的費用很清楚，但真的沒有其他「隱藏收費」了嗎？
@@ -1414,17 +1113,19 @@
     </div>
   </section>
 
+  <!-- ============ Footer ============ -->
   <footer id="contact" class="footer">
     <div class="footer-cta">
-      <div class="container">
+      <div class="container reveal">
         <h2>準備好開始了嗎？</h2>
-        <p style="margin-bottom:2rem; font-size:1.1rem; opacity:0.9;">現在就聯繫我們，讓專業顧問為您規劃最合適的人力方案</p>
+        <p>現在就聯繫我們，讓專業顧問為您規劃最合適的人力方案</p>
         <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-          <a href="tel:0985296485" class="btn btn-hero">
+          <a href="tel:0985296485" class="btn btn-gold btn-hero">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             免費諮詢專線
           </a>
-          <a href="https://forms.office.com/r/kNHksHqNXQ" target="_blank" class="btn btn-hero-outline" style="min-width: 250px;"> <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <a href="https://forms.office.com/r/kNHksHqNXQ" target="_blank" class="btn btn-outline-gold btn-hero" style="min-width: 250px;">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             填寫工作內容需求單
           </a>
         </div>
@@ -1436,14 +1137,14 @@
         <div class="footer-company">
           <div class="logo">
             <div class="logo-japan-container">
-                <div class="yanxuan-text">
-                    <span>嚴</span>
-                    <span>選</span>
-                </div>
+              <div class="yanxuan-text">
+                <span>嚴</span>
+                <span>選</span>
+              </div>
             </div>
             <div class="logo-text">
-              <h1 class="calligraphy-text" style="color:white; font-size: 1.5rem;">得賢引才</h1>
-              <p style="color:rgba(255,255,255,0.7);">聯捷人力 (私業許字第2430號)</p>
+              <h1>得賢引才</h1>
+              <p>聯捷人力 (私業許字第2430號)</p>
             </div>
           </div>
           <p>二十年專業經驗，提供優質外籍人力服務。政府立案，合法經營，是您最值得信賴的人力仲介夥伴。</p>
@@ -1458,33 +1159,25 @@
               <span>0985-296-485</span>
             </li>
             <li>
-                <a href="https://www.facebook.com/AdamAgency.tw" target="_blank" style="display:flex; gap:1rem; align-items:center; color:inherit;">
-                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                    </svg>
-                    <span>得賢引才 AdamAgency</span>
-                </a>
+              <a href="https://www.facebook.com/AdamAgency.tw" target="_blank">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                <span>得賢引才 AdamAgency</span>
+              </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/wangdeshian" target="_blank" style="display:flex; gap:1rem; align-items:center; color:inherit;">
-                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                    <span>@wangdeshian</span>
-                </a>
+              <a href="https://www.instagram.com/wangdeshian" target="_blank">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>@wangdeshian</span>
+              </a>
             </li>
             <li>
-                <a href="https://lin.ee/nCWi9eA" target="_blank" style="display:flex; gap:1rem; align-items:center; color:inherit;">
-                    <svg class="icon icon-sm" viewBox="0 0 24 24" style="fill: white; stroke: none;">
-                        <path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.97 2.97 7.35 7.07 8.46.36.1.86.26.98.6.11.31.07.78.03 1.08l-.15.9c-.04.27-.21 1.07.94.58 1.15-.49 6.22-3.66 8.48-6.27.84-.97 1.3-2.08 1.3-3.18C20.65 5.92 16.17 2 12 2z"/>
-                    </svg>
-                    <span>加入好友</span>
-                </a>
+              <a href="https://lin.ee/nCWi9eA" target="_blank">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" style="fill: currentColor; stroke: none;"><path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.97 2.97 7.35 7.07 8.46.36.1.86.26.98.6.11.31.07.78.03 1.08l-.15.9c-.04.27-.21 1.07.94.58 1.15-.49 6.22-3.66 8.48-6.27.84-.97 1.3-2.08 1.3-3.18C20.65 5.92 16.17 2 12 2z"/></svg>
+                <span>加入好友</span>
+              </a>
             </li>
             <li>
-              <a href="https://www.google.com/maps/search/?api=1&query=桃園市桃園區建華二街23號" target="_blank" style="display:flex; gap:1rem; align-items:center; color:inherit;">
+              <a href="https://www.google.com/maps/search/?api=1&query=桃園市桃園區建華二街23號" target="_blank">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 <span>桃園市桃園區建華二街23號</span>
               </a>
@@ -1506,17 +1199,16 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>© 2026 得賢引才 (聯捷人力). All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- ============ LINE 浮動按鈕 ============ -->
   <a href="https://lin.ee/nCWi9eA" target="_blank" class="line-btn">
-    <svg class="icon" viewBox="0 0 24 24" style="fill: white; stroke: none;">
-        <path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.97 2.97 7.35 7.07 8.46.36.1.86.26.98.6.11.31.07.78.03 1.08l-.15.9c-.04.27-.21 1.07.94.58 1.15-.49 6.22-3.66 8.48-6.27.84-.97 1.3-2.08 1.3-3.18C20.65 5.92 16.17 2 12 2z"/>
-    </svg>
+    <svg class="icon" viewBox="0 0 24 24" style="fill: white; stroke: none;"><path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.97 2.97 7.35 7.07 8.46.36.1.86.26.98.6.11.31.07.78.03 1.08l-.15.9c-.04.27-.21 1.07.94.58 1.15-.49 6.22-3.66 8.48-6.27.84-.97 1.3-2.08 1.3-3.18C20.65 5.92 16.17 2 12 2z"/></svg>
     <span>Line 線上諮詢</span>
   </a>
 
@@ -1548,12 +1240,9 @@
       button.addEventListener('click', () => {
         const item = button.parentElement;
         const isActive = item.classList.contains('active');
-        
-        // Close others
         document.querySelectorAll('.faq-item').forEach(other => {
           if (other !== item) other.classList.remove('active');
         });
-        
         item.classList.toggle('active', !isActive);
       });
     });
@@ -1566,6 +1255,17 @@
         header.classList.remove('scrolled');
       }
     });
+
+    // Scroll Reveal（進場動畫）
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
