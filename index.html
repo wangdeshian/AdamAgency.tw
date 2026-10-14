@@ -416,6 +416,7 @@
     .cost-table th:first-child { border-radius: 6px 0 0 0; }
     .cost-table th:last-child { border-radius: 0 6px 0 0; }
     .cost-table tr:hover td { background: rgba(179,135,40,.04); }
+    .cost-table tr.cost-divider td { border-top: 2px solid rgba(212,175,90,.4); }
     .cost-total td {
       background: linear-gradient(135deg, rgba(191,149,63,.14), rgba(170,119,28,.1));
       font-family: 'Noto Serif TC', serif; font-weight: 900; color: var(--indigo); font-size: 1.02rem;
@@ -859,6 +860,10 @@
               <td>$20,000</td>
             </tr>
             <tr>
+              <td>加班費 (4個週日)</td>
+              <td>$2,668 <span class="cost-note">($667/天)</span></td>
+            </tr>
+            <tr class="cost-divider">
               <td>健保費 (雇主負擔)</td>
               <td>$1,428 <span class="cost-note">(2026年費率)</span></td>
             </tr>
@@ -869,10 +874,6 @@
             <tr>
               <td>職災保險費</td>
               <td>$56 <span class="cost-note">(2026年費率)</span></td>
-            </tr>
-            <tr>
-              <td>加班費 (4個週日)</td>
-              <td>$2,668 <span class="cost-note">($667/天)</span></td>
             </tr>
             <tr class="cost-total">
               <td>每月總計</td>
